@@ -1,0 +1,142 @@
+.header{
+  position: fixed;
+  z-index: 100;
+}
+.navigator{
+  min-height: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: auto;
+  width: 1366px;
+  background-color: rgba(0,0,0,0.1);
+  font-weight:bold ;
+}
+.wrapper{
+  background-color: #e5e5e5;
+  color:#111111;
+  text-align: center;
+  grid-template-columns: auto auto;
+  padding-top: 70px;
+}
+.footer{
+  background-color: #333333;
+  color:#ffffff;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.logo{
+  max-width: 100px;
+  max-height: 100px;
+  align-items: center;
+}
+.nav{
+  float:right;
+  height: 80px;
+
+}
+.menu{
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+.menu-item{
+  float:left;
+  display: block;
+  text-align: center;
+  padding: 13px;
+  text-decoration: none;
+}
+.menu-item a{
+  display: block;
+  text-align: center;
+  padding: 13px;
+  text-decoration: none;
+}
+.menu-item a:hover{
+  color: #111111;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.content{
+  min-height: 1009px;
+  justify-content: center;
+  margin: auto;
+}
+.red-title{
+  font-family: Oswald, sans-serif !important;
+  font-weight: 400;
+  padding-top:57px;
+  color:#f12c0e !important;
+  font-size:3.75rem;
+}
+.intro{
+  font-style: italic;
+  width:793px;
+  margin:auto;
+}
+.main{
+  margin-top: 20px;
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+}
+.footer-content{
+  width:1140px;
+  margin:0 auto;
+  min-height: 120px;
+}
+.footer-content p{
+  width:417px;
+  margin:0 auto;
+  padding-top:20px;
+}
+.banner{
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+}
+.img{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 60%;
+}
+.content-banner{
+  position: relative;
+  text-align: center;
+}
+.overlay-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /*background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))*/
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.overlay-banner-bg {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.siderbar-main{
+  width: 20%;
+}
+.cart-main{
+  width: 30%;
+}

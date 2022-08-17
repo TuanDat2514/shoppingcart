@@ -1,0 +1,147 @@
+.modal {
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content {
+  background-color: #fefefe;
+  border: none;
+  min-height: 200px;
+
+}
+.cart-header{
+  margin-bottom: 10px;
+  clear: both;
+  color:#666666;
+}
+.w10{
+  float:left;
+  width:10%;
+
+}
+.w20{
+  float:left;
+  width:20%;
+
+}
+.w30{
+  float:left;
+  width:30%;
+  display: flex;
+}
+.textRight{
+  text-align: right;
+}
+.input{
+  position: relative;
+  border: none;
+  left: 90px;
+}
+.row:hover{
+  background-color: black;
+}
+.cart-content{
+  clear: both;
+  min-height: 20px;
+  max-height: 400px;
+}
+.cart-total{
+  padding-top: 20px;
+  text-align: right;
+
+}
+.cart-checkout{
+  width: 100%;
+}
+.divider{
+  clear: both;
+  height: 1px;
+  background-color: #aaa;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.cart-item{
+  height: 150px;
+  margin-top:10px;
+}
+.big-text{
+  font-size:1.5rem;
+  color:#111111;
+}
+.cart-item-img{
+  object-fit: cover;
+  width:200px;
+
+}
+.textBold{
+  font-weight: bold;
+}
+.button-remove {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button-remove:hover {
+  background-color: #d2190b;
+}
+.cart-checkout{
+  margin-top:20px;
+
+}
+.button-checkout {
+  border-radius: 10px;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+.button-checkout:hover {
+  background-color: #00526e;
+
+}
+.cart-content input{
+  width: 20px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.img-empty{
+  margin: 20px;
+  padding: 20px;
+}

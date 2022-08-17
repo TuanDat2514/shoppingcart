@@ -1,0 +1,182 @@
+.modal {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  margin: auto;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  border-radius: 10px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 1140px;
+  min-height: 200px;
+}
+
+.cart-header {
+  clear: both;
+  color: #666666;
+}
+
+.w10 {
+  float: left;
+  width: 10%;
+
+}
+
+.w20 {
+  float: left;
+  width: 20%;
+
+}
+
+.w30 {
+  float: left;
+  width: 30%;
+
+}
+
+.textRight {
+  text-align: right;
+}
+
+.cart-content {
+  clear: both;
+  min-height: 20px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+/*.cart-content:hover{*/
+/*  cursor: pointer;*/
+/*  background-color: #333333;*/
+/*}*/
+
+.cart-total {
+  clear: both;
+  text-align: right;
+
+
+}
+
+.cart-checkout {
+  clear: both;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.divider {
+  clear: both;
+  height: 1px;
+  background-color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item {
+  height: 150px;
+  margin-top: 10px;
+}
+
+.big-text {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #111111;
+}
+
+.cart-item-img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.button-remove {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button-remove:hover {
+  background-color: #d2190b;
+}
+
+.cart-checkout {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-checkout {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.button-checkout:hover {
+  background-color: #00526e;
+
+}
+
+.cart-content input {
+  width: 20px;
+}
+
+.btn-control {
+  width: 30px;
+  border: none;
+  background: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-control:hover {
+  background-color: rgba(169, 169, 169, 0.88);
+  cursor: pointer;
+}
+
+.inp-qty {
+  width: 40px;
+  border: none;
+  font-size: 18px;
+}

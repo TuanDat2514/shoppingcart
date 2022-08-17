@@ -1,0 +1,54 @@
+<div class="header">
+  <div class="navigator">
+    <img class="logo" src="./assets/images/logo21123123.png">
+    <div class="nav">
+      <ul class="menu">
+        <li class="menu-item"><a>Home</a></li>
+        <li class="menu-item"><a>Menu</a></li>
+        <li class="menu-item"><a>About</a></li>
+        <li class="menu-item"><a id="btn_cart">Cart<span id="cart_num"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="content">
+    <div class="banner">
+      <div class="img">
+        <img class="img ng-star-inserted"
+             src="https://thumbs.dreamstime.com/b/background-pizza-set-delicious-pizzas-bacon-cheese-mushrooms-top-view-183994608.jpg">
+        <div class="overlay-banner overlay-banner-bg"></div>
+      </div>
+      <div class="content-banner">
+        <div class="red-title">Menu</div>
+        <p class="intro">Unique wood fired pizzas or be tempted by our pasta, antipasto, focaccias, salads and
+          Bruschetta dishes. Relax in the friendly ambience as you enjoy the aromas of the wood ovens or sit al fresco
+          and soak up the Mildura sunshine.</p>
+      </div>
+    </div>
+    <div class="main" fxLayout="row" fxLayoutAlign="space-between start" >
+      <div class="siderbar-main" fxFlex="300px"
+           fxFlex.lt-md="200px">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="menu-main" fxFlex="700px">
+      <app-menu></app-menu>
+      </div>
+      <div class="cart-main" fxFlex>
+        <app-cart (showCart)=onHandler($event)></app-cart>
+      </div>
+      <div *ngIf="showCart">
+        <app-modal-checkout (closeModal)="onHandler($event)"></app-modal-checkout>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="footer">-->
+<!--  <div class="footer-content">-->
+<!--    <p>-->
+<!--      Sample text. Click to select the text box. Click again or double click to start editing the text.-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</div>-->
+
+
