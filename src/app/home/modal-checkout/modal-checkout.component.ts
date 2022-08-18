@@ -11,8 +11,9 @@ export class ModalCheckoutComponent implements OnInit {
   total = 0;
   inp = 0;
   disabled: boolean = false;
+  opendialog:boolean=false;
   @Output() closeModal = new EventEmitter<boolean>();
-
+  loading=false;
   constructor(private data: DataService) {
   }
 
@@ -37,7 +38,9 @@ export class ModalCheckoutComponent implements OnInit {
       this.data.changeTotal(this.total);
     }
     if (item.qty == 0) {
-      this.disabled = true;
+      // this.disabled = true;
+      let itemc=document.getElementsByClassName('cart-item');
+      itemc[index].getElementsByClassName('btn-control')[0].setAttribute("disabled",'true');
     }
   }
 
@@ -51,5 +54,19 @@ export class ModalCheckoutComponent implements OnInit {
       // location.reload();
       this.data.changeTotal(0);
     }
+  }
+
+  confirmCheckout(){
+    this.loading=true;
+    this.opendialog=false;
+    setTimeout(() =>{
+      this.loading=false
+    },3000);
+  }
+  openDialog() {
+    this.opendialog=true;
+  }
+  closeDialog(){
+    this.opendialog=false;
   }
 }

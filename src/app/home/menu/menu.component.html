@@ -1,12 +1,17 @@
 <div id="product_container" class="product">
-  <div class="item" *ngFor="let item of item" fxLayout="row">
-    <img class="item-img" src={{item.img}}>
-    <div class="item-des">
-      <h3 class="item-name">{{item.title}}</h3>
-      <p class="item-ingredient">{{item.ingredient}}</p>
-      <h6 class="item-price">{{item.price|currency}}</h6>
-    </div>
-    <a class="img-btn" data-id="1" (click)="addItem(item)">add to cart</a>
-  </div>
+ <ng-container>
+   <div class="item" *ngFor="let item of item;last as l" [style.margin-bottom]="l? '50px':''" fxLayout="row">
+     <img class="item-img" src='./assets/images/istockphoto-1188412964-612x612.jpg'>
+     <div class="item-des">
+       <h3 class="item-name">{{item.title}}</h3>
+       <p class="item-ingredient">{{item.ingredient}}</p>
+       <h6 class="item-price">{{item.price|currency}}</h6>
+     </div>
+     <a class="img-btn" data-id="1" (click)="addItem(item)">add to cart</a>
+   </div>
+ </ng-container>
 </div>
-
+<!--<pre>{{item|async|json}}</pre>-->
+<ng-template #loading><div class="loading">
+  <div class="loader">Loading...</div>
+</div></ng-template>

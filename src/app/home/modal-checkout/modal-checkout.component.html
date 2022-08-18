@@ -1,7 +1,7 @@
 <div id="shopping-cart" class="modal">
   <div class="modal-content">
-    <div>
-      <span>Shopping cart</span>
+    <div class="modal-header">
+      <span>Checkout</span>
       <span id="cart-close" class="close" (click)="closemodal()">&times;</span>
     </div>
     <div class="cart-header">
@@ -20,18 +20,18 @@
         </div>
         <div class="w30">
           <div class="textBold">{{item.title}}</div>
-          <div>{{item.ingredient}}</div>
+          <div>{{item.des}}</div>
         </div>
         <div class="w10 textBold">{{item.price|currency}}</div>
         <div class="w10">
-          <button class="btn-control" (click)="control(-1,i,item)" [disabled]="disabled">-</button>
+          <button class="btn-control" (click)="control(-1,i,item)">-</button>
           <input [(ngModel)]="item.qty" class="inp-qty" type="text" style="width: 40px;text-align: center"/>
           <button class="btn-control" (click)="control(1,i,item)">+</button>
         </div>
         <div class="w10">
           <button class="button-remove" (click)="removeItem(i,item)">Remove</button>
         </div>
-        <div class="w20 textRight textBold">{{item.qty*item.price|currency}}</div>
+        <div class="w20 textRight textBold">{{item.qty * item.price|currency}}</div>
       </div>
     </div>
     <div class="divider"></div>
@@ -40,7 +40,21 @@
       <div class="big-text" id="cart-total-price" style="width: 100%">{{total|currency}}</div>
     </div>
     <div class="cart-checkout">
-      <button class="button-checkout">Checkout</button>
+      <button class="button-checkout" (click)="openDialog()">Checkout
+      </button>
+    </div>
+    <div class="loading" *ngIf="loading">
+      <div class="loader">Loading...</div>
     </div>
   </div>
 </div>
+<div class="dialog" *ngIf="opendialog">
+  <dialog [open]="opendialog" class="dialog-content"><p>Are you sure this bill?</p>
+    <div class="btn-dialog">
+    <button class="btn-action confirm" (click)="confirmCheckout()"><p>Confirm</p></button>
+    <button class="btn-action cancel" (click)="closeDialog()"><p>Cancel</p></button>
+    </div>
+</dialog>
+</div>
+
+

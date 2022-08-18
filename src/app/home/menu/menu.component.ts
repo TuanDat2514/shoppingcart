@@ -16,6 +16,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.item = item._item;
+    this.data.Total.subscribe(data=>this.total=data);
   }
 
   addItem(item: any) {
