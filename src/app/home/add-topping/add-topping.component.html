@@ -16,12 +16,12 @@
       </div>
       <div class="divider"></div>
       <div class="add-topping">
-        <div class="" *ngFor="let itemtopping of topping">
+        <div class="" *ngFor="let itemtopping of topping;let i=index">
           <h4 style="font-size: 18px;font-weight: bold">{{itemtopping.name}}</h4>
           <ul style="list-style: none;margin-left: -7%;">
             <li class="list-topping" *ngFor="let option of itemtopping.options;let j=index">
               <div class="custom-radio">
-                <input [(ngModel)]="inp" [value]="option.name" class="inp-radio" type="radio" [name]="option.name" [id]="option.name" (change)="click(j)">
+                <input [(ngModel)]="inp[i].input" [value]="option.name" class="inp-radio" type="radio" [name]="option.name" [id]="option.name" (change)="click(j)">
                 <label [for]="option.name">{{option.name}}</label>
               </div>
             </li>
@@ -36,7 +36,7 @@
             <button class="control controlvalue" (click)="control(1)">+</button>
           </div>
           <div class="btn-add">
-            <button class="control addtocart">ADD TO CART</button>
+            <button class="control addtocart" (click)="addtocart()">ADD TO CART</button>
           </div>
       </div>
     </div>

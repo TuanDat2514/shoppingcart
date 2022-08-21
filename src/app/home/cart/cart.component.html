@@ -14,13 +14,15 @@
         <th>Description</th>
         <th>Price</th>
         <th>Quantity</th>
+        <th>Topping</th>
         <th>Total</th>
       </tr>
       <tr *ngFor="let item of items">
         <td>{{item.title}}</td>
         <td>{{item.price|currency}}</td>
         <td>{{item.qty}}</td>
-        <td class="total">{{item.price*item.qty|currency}}</td>
+        <td>{{item.toppings[0].length}}</td>
+        <td class="total">{{item.total|currency}}</td>
       </tr>
     </table>
           <div class="cart-checkout">
