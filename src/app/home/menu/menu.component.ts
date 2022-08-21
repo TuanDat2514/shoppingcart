@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import * as item from 'src/data/interface/item';
 import {DataService} from "../../services/data.service";
+import {_item} from "src/data/interface/item";
+import {_topping} from "src/data/interface/item";
 
 @Component({
   selector: 'app-menu',
@@ -10,15 +12,24 @@ import {DataService} from "../../services/data.service";
 export class MenuComponent implements OnInit {
   item: any;
   total = 0;
-
+  loading:boolean=false;
+  selected:any;
+  selectTopping:boolean=false;
   constructor(private data: DataService) {
   }
 
   ngOnInit(): void {
-    this.item = item._item;
+    const x=setTimeout(()=>{
+      this.item=_item;
+      this.loading=true;
+      clearTimeout(x);
+    },3000)
     this.data.Total.subscribe(data=>this.total=data);
   }
-
+  selectedItem(item:any){
+    this.selected=item;
+    this.selectTopping=!this.selectTopping;
+  }
   addItem(item: any) {
     console.log(this.data.total.getValue())
     this.total = this.total + item.price;
@@ -42,9 +53,13 @@ export class MenuComponent implements OnInit {
         price: item.price,
         img: item.img,
         qty: 1,
+        toppings:[],//
         total: item.price
       });
       this.data.changeTotal(this.total);
     }
+  }
+  closeTopping(event:any){
+    this.selectTopping=event;
   }
 }

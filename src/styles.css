@@ -259,7 +259,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .loading{
 
-  width: 20%;
   left: 40%;
   top: 30%;
 }
@@ -301,5 +300,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   100% {
     transform: rotate(360deg);
   }
+}
+.item-name{
+  font-family:Oswald, sans-serif !important;
+  font-weight: 400;
+  font-size:1.875rem;
+  margin:0;
+}
+button{
+  cursor: pointer;
 }
 

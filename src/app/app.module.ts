@@ -8,10 +8,11 @@ import { CartComponent } from './home/cart/cart.component';
 import { SidebarComponent } from './home/sidebar/sidebar.component';
 import {RouterModule} from "@angular/router";
 import { ModalCheckoutComponent } from './home/modal-checkout/modal-checkout.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { StickyComponent } from './sticky/sticky.component';
 import { LoginComponent } from './home/login/login.component';
 import {HttpClientModule} from "@angular/common/http";
+import { AddToppingComponent } from './home/add-topping/add-topping.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     SidebarComponent,
     ModalCheckoutComponent,
     StickyComponent,
-    LoginComponent
+    LoginComponent,
+    AddToppingComponent
   ],
     imports: [
         BrowserModule,
@@ -29,6 +31,7 @@ import {HttpClientModule} from "@angular/common/http";
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
+        ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
