@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {DataService} from "../../services/data.service";
+import {AddToppingComponent} from "../add-topping/add-topping.component";
 
 @Component({
   selector: 'app-modal-checkout',
@@ -26,16 +27,23 @@ export class ModalCheckoutComponent implements OnInit {
   }
 
   control(i: any, index: any, item: any) {
+    const t=item.total;
+    console.log(t);
     if (item.qty >= 0) {
       this.disabled = false;
-      if (i == 1) {
-        this.total = this.total + item.price;
+      this.data.items[index].qty += i;
+      let sumTop=0;
+      for (let i=0;i<this.data.items[index].toppings[0].length;i++){
+        sumTop+=this.data.items[index].toppings[0][i].price;
       }
-      if (i == -1) {
-        this.total = this.total - item.price;
+      this.data.items[index].total=(item.price+sumTop)*item.qty;
+      let sum=0;
+      for(let i=0;i<this.data.items.length;i++){
+        console.log(this.data.items[i].total);
+        sum+=this.data.items[i].total;
       }
-      this.itemscart[index].qty += i;
-      this.data.changeTotal(this.total);
+      this.data.changeTotal(sum);
+      console.log(this.data.items)
     }
     if (item.qty == 0) {
       // this.disabled = true;
@@ -68,5 +76,12 @@ export class ModalCheckoutComponent implements OnInit {
   }
   closeDialog(){
     this.opendialog=false;
+  }
+  removeTopping(topping:any,indexItem:any,j:any){
+    let i=this.data.items[indexItem].toppings[0][j].price;
+    this.data.items[indexItem].toppings[0].splice(j,1);
+    this.data.items[indexItem].total=this.data.items[indexItem].total-i*this.data.items[indexItem].qty;
+    this.data.changeTotal(this.data.total.value-i);
+    console.log(i);
   }
 }

@@ -22,7 +22,10 @@
             <li class="list-topping" *ngFor="let option of itemtopping.options;let j=index">
               <div class="custom-radio">
                 <input [(ngModel)]="inp[i].input" [value]="option.name" class="inp-radio" type="radio" [name]="option.name" [id]="option.name" (change)="click(j)">
+                <div class="label-radio">
                 <label [for]="option.name">{{option.name}}</label>
+                <div>{{option.price|currency}}</div>
+                </div>
               </div>
             </li>
           </ul>

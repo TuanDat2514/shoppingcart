@@ -1,16 +1,16 @@
-<form method="post" class="body-signin">
+<form method="post" class="body-signin" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
   <div class="imgcontainer">
     <img src="assets/images/logo2.png" alt="Avatar" class="avatar">
   </div>
   <div class="container">
-    <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <input type="text" placeholder="Username" name="uname" id="uname" required formControlName="username">
+    <input type="password" placeholder="Password" name="psw" id="psw" required formControlName="password">
     <button type="submit">Login</button>
     <div style="display: flex;gap: 22%;">
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw"><a href="#">Forgot password?</a></span>
     </div>
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" class="cancelbtn" (click)="close()">Cancel</button>

@@ -21,6 +21,11 @@
         <div class="w30">
           <div class="textBold">{{item.title}}</div>
           <div>{{item.des}}</div>
+          <div class="topping">
+            <button *ngFor="let topping of item.toppings[0];let j=index" class="chips-topping">{{topping.name}}
+              <span class="closebtn close" (click)="removeTopping(topping,i,j)">&times;</span>
+            </button>
+          </div>
         </div>
         <div class="w10 textBold">{{item.price|currency}}</div>
         <div class="w10">
@@ -31,7 +36,7 @@
         <div class="w10">
           <button class="button-remove" (click)="removeItem(i,item)">Remove</button>
         </div>
-        <div class="w20 textRight textBold">{{item.qty * item.price|currency}}</div>
+        <div class="w20 textRight textBold">{{item.total|currency}}</div>
       </div>
     </div>
     <div class="divider"></div>
@@ -51,10 +56,10 @@
 <div class="dialog" *ngIf="opendialog">
   <dialog [open]="opendialog" class="dialog-content"><p>Are you sure this bill?</p>
     <div class="btn-dialog">
-    <button class="btn-action confirm" (click)="confirmCheckout()"><p>Confirm</p></button>
-    <button class="btn-action cancel" (click)="closeDialog()"><p>Cancel</p></button>
+      <button class="btn-action confirm" (click)="confirmCheckout()"><p>Confirm</p></button>
+      <button class="btn-action cancel" (click)="closeDialog()"><p>Cancel</p></button>
     </div>
-</dialog>
+  </dialog>
 </div>
 
 
