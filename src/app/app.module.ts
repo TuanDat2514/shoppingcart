@@ -9,7 +9,6 @@ import { SidebarComponent } from './home/sidebar/sidebar.component';
 import {RouterModule} from "@angular/router";
 import { ModalCheckoutComponent } from './home/modal-checkout/modal-checkout.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { StickyComponent } from './sticky/sticky.component';
 import { LoginComponent } from './home/login/login.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AddToppingComponent } from './home/add-topping/add-topping.component';
@@ -21,7 +20,6 @@ import { AddToppingComponent } from './home/add-topping/add-topping.component';
     CartComponent,
     SidebarComponent,
     ModalCheckoutComponent,
-    StickyComponent,
     LoginComponent,
     AddToppingComponent
   ],

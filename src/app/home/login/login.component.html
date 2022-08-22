@@ -1,12 +1,21 @@
-<form method="post" class="body-signin" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+<form method="post" class="body-signin" [formGroup]="formLogin"  (ngSubmit)="onSubmit()">
   <div class="imgcontainer">
     <img src="assets/images/logo2.png" alt="Avatar" class="avatar">
   </div>
   <div class="container">
-    <input type="text" placeholder="Username" name="uname" id="uname" required formControlName="username">
-    <input type="password" placeholder="Password" name="psw" id="psw" required formControlName="password">
+    <div>
+      <input type="text" placeholder="Username" name="uname" id="uname" formControlName="username">
+        <div class="message" *ngIf="formLogin.get('username')?.touched && !submitted">
+          <div *ngIf="formLogin.get('username')?.errors?.['required']">Username is required</div>
+          <div  *ngIf="formLogin.get('username')?.errors?.['minlength']">Username minlength is 6</div>
+          <div  *ngIf="formLogin.get('username')?.errors?.['maxlength']">Username maxlength is 12</div>
+        </div>
+    </div>
+    <div class="">
+      <input type="password" placeholder="Password" name="psw" id="psw" required formControlName="password">
+    </div>
     <button type="submit">Login</button>
-    <div style="display: flex;gap: 22%;">
+    <div style="display: flex;gap: 17%;height: 20%;align-items: center">
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>

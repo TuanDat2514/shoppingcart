@@ -8,7 +8,13 @@
           <li class="menu-item"><a>Menu</a></li>
           <li class="menu-item"><a>Discount</a></li>
           <li class="menu-item"><a>About</a></li>
-          <li class="menu-item"><a>Support</a></li>
+          <li class="menu-item dropdown"><a>Support
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </a></li>
         </ul>
         <!--      <div class="btn-login">-->
         <!--          <button>Sign in</button>-->
@@ -20,10 +26,16 @@
           <p>Location</p>
         </a>
       </div>
+      <div class="btn-signup">
+        <a class="signup">
+          <p>Sign up</p>
+        </a>
+      </div>
       <div class="btn-signin">
         <a class="signin" (click)="clickLogin()">
           <img src="./assets/images/login-sketch.png" alt="">
           <p>Sign in</p>
+
         </a>
       </div>
     </div>
