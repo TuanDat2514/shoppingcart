@@ -1,5 +1,8 @@
 <div class="header">
   <div class="navigator" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="btn-menu menu1" (click)="click()">
+      <img src="/assets/images/icons8-menu-90.png">
+    </div>
     <img class="logo" src="./assets/images/logo21123123.png">
     <div class="nav" fxLayoutGap>
       <div>
@@ -8,13 +11,14 @@
           <li class="menu-item"><a>Menu</a></li>
           <li class="menu-item"><a>Discount</a></li>
           <li class="menu-item"><a>About</a></li>
-          <li class="menu-item dropdown"><a>Support
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </a></li>
+          <li class="menu-item ">
+            <a>Support</a>
+<!--            <ul class="dropdown-content">-->
+<!--              <li class="main-content">Link 1</li>-->
+<!--              <li class="main-content">Link 2</li>-->
+<!--              <li class="main-content">Link 3</li>-->
+<!--            </ul>-->
+          </li>
         </ul>
         <!--      <div class="btn-login">-->
         <!--          <button>Sign in</button>-->
@@ -26,20 +30,30 @@
           <p>Location</p>
         </a>
       </div>
-      <div class="btn-signup">
-        <a class="signup">
-          <p>Sign up</p>
-        </a>
-      </div>
-      <div class="btn-signin">
-        <a class="signin" (click)="clickLogin()">
-          <img src="./assets/images/login-sketch.png" alt="">
-          <p>Sign in</p>
-
-        </a>
-      </div>
+      <ng-container  *ngIf="submitted">
+        <div class="btn-signup">
+          <a class="signup">
+            <p>Sign up</p>
+          </a>
+        </div>
+        <div class="btn-signin">
+          <a class="signin" (click)="clickLogin()">
+            <img src="./assets/images/login-sketch.png" alt="">
+            <p>Sign in</p>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+    <div class="btn-menu">
+      <img src="/assets/images/icons8-menu-90.png">
     </div>
   </div>
+  <ul class="dropdown dropdown_menu-6" *ngIf="drop">
+    <li class="dropdown_item-1">Pizza</li>
+    <li class="dropdown_item-2">Burger</li>
+    <li class="dropdown_item-3">Hot Dog</li>
+    <li class="dropdown_item-4">Drink</li>
+  </ul>
 </div>
 <div class="wrapper">
   <div class="banner">
@@ -64,7 +78,7 @@
     </div>
     <!--      Menu-->
     <div class="menu-main" fxFlex="700px">
-      <app-menu></app-menu>
+      <app-menu (closebtn)="onHandler($event)" ></app-menu>
     </div>
     <!--      Cart-->
     <div class="cart-main" fxFlex>
@@ -78,6 +92,13 @@
     <app-login (closeSignin)="close($event)"></app-login>
   </div>
 </div>
+<!--iphone12-->
+
+<button class="btn-cart" id="btn-cart">
+  <img style=" width: 55%;" src="/assets/images/icons8-shopping-cart-90.png">
+  <span class="badge">{{items.length}}</span>
+</button>
+
 <!--
 <div class="footer">
   <div class="footer-content">

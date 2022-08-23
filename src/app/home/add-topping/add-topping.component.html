@@ -6,25 +6,27 @@
     </div>
     <div class="modal-topping-topping">
       <div class="model-header">
-      <div class="modal-topping-content">
-        <h3 class="modal-item-name" style="font-weight: bold">{{selectedItem.title}}</h3><br>
-        <p>{{selectedItem.ingredient}}</p>
-      </div>
+        <div class="modal-topping-content">
+          <h3 class="modal-item-name" style="font-weight: bold">{{selectedItem.title}}</h3><br>
+          <p>{{selectedItem.ingredient}}</p>
+        </div>
         <div class="close">
           <button (click)="close()">X</button>
         </div>
       </div>
       <div class="divider"></div>
       <div class="add-topping">
-        <div class="" *ngFor="let itemtopping of topping;let i=index">
-          <h4 style="font-size: 18px;font-weight: bold">{{itemtopping.name}}</h4>
-          <ul style="list-style: none;margin-left: -7%;">
+        <div *ngFor="let itemtopping of topping;let i=index">
+          <h4 style="font-size: 18px;font-weight: bold" (click)="show(i)">{{itemtopping.name}}</h4>
+<!--          list-->
+          <ul class="list" style="list-style: none;margin-left: -7%;" *ngIf="showlist[i].show">
             <li class="list-topping" *ngFor="let option of itemtopping.options;let j=index">
               <div class="custom-radio">
-                <input [(ngModel)]="inp[i].input" [value]="option.name" class="inp-radio" type="radio" [name]="option.name" [id]="option.name" (change)="click(j)">
+                <input [(ngModel)]="inp[i].input" [value]="option.name" class="inp-radio" type="radio"
+                       [name]="option.name" [id]="option.name" (change)="click(j)">
                 <div class="label-radio">
-                <label [for]="option.name">{{option.name}}</label>
-                <div>{{option.price|currency}}</div>
+                  <label [for]="option.name">{{option.name}}</label>
+                  <div>{{option.price|currency}}</div>
                 </div>
               </div>
             </li>
@@ -33,15 +35,17 @@
         </div>
       </div>
       <div class="modal-topping-footer">
-          <div class="custom-control">
-            <button class="control controlvalue" (click)="control(-1)">-</button>
-            <input class="control controlvalue inp" [value]="inpValue" style="text-align: center" disabled>
-            <button class="control controlvalue" (click)="control(1)">+</button>
-          </div>
-          <div class="btn-add">
-            <button class="control addtocart" (click)="addtocart()">ADD TO CART</button>
-          </div>
+        <div class="custom-control">
+          <button class="control controlvalue" (click)="control(-1)">-</button>
+          <input class="control controlvalue inp" [value]="inpValue" style="text-align: center;color: white" disabled>
+          <button class="control controlvalue" (click)="control(1)">+</button>
+        </div>
+        <div class="btn-add">
+          <button class="control addtocart" (click)="addtocart()">ADD TO CART</button>
+        </div>
       </div>
+    </div>
+    <div class="backgound">
     </div>
   </div>
 </div>

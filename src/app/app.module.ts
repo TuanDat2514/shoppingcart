@@ -12,6 +12,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './home/login/login.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AddToppingComponent } from './home/add-topping/add-topping.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,8 @@ import { AddToppingComponent } from './home/add-topping/add-topping.component';
         FormsModule,
         HttpClientModule,
         ReactiveFormsModule,
+      MatButtonModule,
+      MatIconModule
     ],
   providers: [],
   bootstrap: [AppComponent]

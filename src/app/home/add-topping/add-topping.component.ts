@@ -21,6 +21,12 @@ export class AddToppingComponent implements OnInit {
     {input: ''},
     {input: ''}
   ];
+  showlist=[
+    {show: false},
+    {show: false},
+    {show: false},
+    {show: false}
+  ]
   @Input() selectedItem: any;
   @Output() closeModal = new EventEmitter<boolean>;
 
@@ -48,6 +54,8 @@ export class AddToppingComponent implements OnInit {
 
   close() {
     this.closeModal.emit(false);
+    let i=document.getElementById('btn-cart') as HTMLElement;
+    i.style.display="block";
   }
 
   click(i: any) {
@@ -97,5 +105,9 @@ export class AddToppingComponent implements OnInit {
       sum+=this.data.items[i].total;
     }
     this.data.changeTotal(sum);
+  }
+  show(i:any){
+    this.showlist[i].show=!this.showlist[i].show;
+    console.log(this.showlist)
   }
 }

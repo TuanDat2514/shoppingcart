@@ -12,6 +12,8 @@ export class DataService {
   Total=this.total.asObservable()
   bool=new BehaviorSubject<any>('');
   Bool=this.bool.asObservable()
+  submitted=new BehaviorSubject<boolean>(true);
+  Submitted=this.submitted.asObservable()
   constructor(private http:HttpClient) { }
   changeItem(item:any){
     this.items.push(item);
@@ -25,5 +27,8 @@ export class DataService {
   }
   getAPI(options:any):Observable<any> {
     return this.http.get(options.url,{headers:options.headers});
+  }
+  changeSubmit(sub:boolean){
+    this.submitted.next(sub);
   }
 }

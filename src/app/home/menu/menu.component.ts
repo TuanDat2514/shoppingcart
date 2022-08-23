@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import * as item from 'src/data/interface/item';
 import {DataService} from "../../services/data.service";
 import {_item} from "src/data/interface/item";
@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
   loading:boolean=false;
   selected:any;
   selectTopping:boolean=false;
+  @Output() closebtn=new EventEmitter<boolean>();
   constructor(private data: DataService) {
   }
 
@@ -33,7 +34,9 @@ export class MenuComponent implements OnInit {
   addItem(item: any) {
     this.selected=item;
     this.selectTopping=!this.selectTopping;
-    console.log(this.data.total.getValue())
+    let i=document.getElementById('btn-cart') as HTMLElement;
+    i.style.display="none";
+    this.closebtn.emit(false);
     /*this.total = this.total + this.selected.price;
     let exits = false;
     for (let i = 0; i < this.data.items.length; i++) {

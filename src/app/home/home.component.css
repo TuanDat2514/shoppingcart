@@ -1,0 +1,133 @@
+.btn-menu{
+  display: none;
+}
+.img{
+  position: absolute;
+  object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+}
+.overlay-banner {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /*background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))*/
+  width: 100%;
+  height: 100%;
+position: absolute;
+}
+.overlay-banner-bg {
+  background: rgba(0,0,0,0.2);
+}
+@media screen and (max-width: 390px ){
+  .cart-main{
+    display: none;
+  }
+  .siderbar-main{
+    display: none;
+  }
+  .menu-main{
+    width: 100%;
+  }
+  .nav{
+    display: none;
+  }
+  .red-title{
+    font-family: Oswald, sans-serif !important;
+    font-weight: 400;
+    padding-top:40px;
+    color:#f12c0e !important;
+    font-size:2.75rem;
+  }
+  .intro{
+    display: none;
+  }
+  .banner{
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    /*color: white;*/
+    /*height: 160px;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    display: none;
+  }
+  .main{
+    padding-right: 0;
+  }
+  .btn-cart{
+    background-color: #008CBA;
+    position: fixed;
+    z-index: 1000;
+    top: 80%;
+    right: 11%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+  }
+  .btn-cart:focus{
+    background-color: #036d8c;
+  }
+  .badge{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    top: 0px;
+    font-weight: bold;
+  }
+  .btn-menu{
+    display: block;
+    text-align: center;
+
+  }
+  .btn-menu img{
+    width: 40%;
+    padding-top: 30%;
+  }
+  .navigator{
+    justify-content: space-between;
+  }
+  .dropdown li{
+    color: white;
+    background-color: #34495e;
+    padding: 10px 20px;
+    font-size: 16px;
+    opacity: 1;
+  }
+  .dropdown_menu-6 {
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    margin: 0!important;
+    padding: 0;
+  animation: growDown 300ms backwards;
+    transform-origin: top center;
+  ;
+  }
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0)
+    }
+    80% {
+      transform: scaleY(1.1)
+    }
+    100% {
+      transform: scaleY(1)
+    }
+  }
+  .add-topping{
+    display: none;
+  }
+}

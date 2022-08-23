@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html{
-  overflow: auto;
+  overflow: hidden;
 }
 
 html, body { height: 100%; }
@@ -54,13 +54,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: 0;
   padding: 0;
   overflow: hidden;
-
+  display: flex;
+}
+.menu>li{
+ position: static;
+  list-style-type: none;
 }
 .menu-item{
   float:left;
   display: block;
   text-align: center;
-  padding: 13px;
+  padding: 0 13px 0 13px;
   text-decoration: none;
 }
 .dropbtn {
@@ -72,20 +76,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .dropdown {
-  display: inline-block;
+  display: block;
+  padding: 13px;
 }
 
-.dropdown-content {
-  /*display: none;*/
-  position: absolute;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1000000000;
-  margin-top: 25px;
-  width: 20%;
-
+.main-content{
+  list-style-type: none;
 }
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -118,13 +115,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-family: Oswald, sans-serif !important;
   font-weight: 400;
   padding-top:57px;
-  color:#f12c0e !important;
+  color: #e8d7c1 !important;
   font-size:3.75rem;
+  z-index: 3;
 }
 .intro{
   font-style: italic;
-  width:793px;
-  margin:auto;
+  width: 70%;
+  margin: 25px 10% 0 15%!important;
+  z-index: 3;
 }
 .main{
   margin-top: 20px;
@@ -152,34 +151,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-size: cover;
   position: relative;
   overflow: hidden;
+}
 
-}
-.img{
-  position: absolute;
-  top: 0px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  opacity: 60%;
-}
 .content-banner{
   position: relative;
   text-align: center;
-}
-.overlay-banner {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /*background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))*/
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-.overlay-banner-bg {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 .siderbar-main{
   height: fit-content;

@@ -6,7 +6,15 @@ export interface Item{
   img:string,
   category:number
 }
-
+export interface User{
+  id:number;
+  username:string;
+  password:string;
+  discount:{
+    condition:string;
+    discount:number;
+  }[];
+}
 export const _item:Item[]=[
   {id:1,title:"Original",ingredient:"Tomato sauce, mozzarella & oregano",price:18,img:"./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",category:1},
   {id:2,title:"Salami",ingredient:"Tomato sauce, mozzarella & mild salami",price:15,img:"./assets/images/sdw.jpg",category:1},
@@ -38,4 +46,9 @@ export const _topping:Topping[]=[
   {id:2,name:'Crust',options:[{name:'Thin Crust',price:0},{name:'Handtossed',price:0},{name:'New York Crust',price:0}],category:[1]},
   {id:3,name:'Meat',options:[{name:'Extra Meat',price:0},{name:'Double Meat',price:5}],category:[2]},
 ]
+export const _user:User[]=[
+  {id:1,username:'tuandat14',password:'tuandat14',discount:[{condition:'total > $100',discount:30},{condition:'total > $50',discount:10}]},
+  {id:1,username:'huyenanh',password:'huyenanh',discount:[{condition:'total > $200',discount:40},{condition:'total > $0',discount:20}]}
+]
+
 
