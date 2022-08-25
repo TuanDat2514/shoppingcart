@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {Item} from "../../data/interface/item";
+import {Item, User} from "../../data/interface/item";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
@@ -13,7 +13,20 @@ export class DataService {
   bool=new BehaviorSubject<any>('');
   Bool=this.bool.asObservable()
   submitted=new BehaviorSubject<boolean>(true);
-  Submitted=this.submitted.asObservable()
+  Submitted=this.submitted.asObservable();
+  user=new BehaviorSubject<User>({
+    id: 0,
+    username: '',
+    password: '',
+    img: '',
+    discount:[{
+      name:'',
+      condition: 0,
+      discount: 0,
+    }]});
+  User=this.user.asObservable();
+  itemfilter=new BehaviorSubject<any>(null);
+  Itemfilter=this.itemfilter.asObservable();
   constructor(private http:HttpClient) { }
   changeItem(item:any){
     this.items.push(item);
@@ -30,5 +43,11 @@ export class DataService {
   }
   changeSubmit(sub:boolean){
     this.submitted.next(sub);
+  }
+  changeUser(user:User){
+    this.user.next(user);
+  }
+  changeItems(item:any){
+    this.itemfilter.next(item);
   }
 }

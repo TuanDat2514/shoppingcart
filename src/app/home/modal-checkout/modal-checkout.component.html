@@ -41,6 +41,9 @@
     </div>
     <div class="divider"></div>
     <div class="cart-total">
+      <select>
+        <option *ngFor="let u of user.discount" [value]="u.condition">{{u.name}}</option>
+      </select>
       <div class="big-text">Total</div>
       <div class="big-text" id="cart-total-price" style="width: 100%">{{total|currency}}</div>
     </div>

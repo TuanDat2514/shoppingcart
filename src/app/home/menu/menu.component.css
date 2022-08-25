@@ -13,6 +13,16 @@
   margin-right: 20px ;
   background-color: #ffffff;
 }
+.item input{
+  flex: 1;
+  border: none;
+  font-weight: bold;
+  height: 100%;
+}
+.img-search{
+  width: 40px;
+  height: 40px;
+}
 .item-img{
   object-fit: cover;
   width:200px;
@@ -58,7 +68,7 @@
 .img-btn:hover{
   background-color: #b7b7b7;
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 414px){
   .item {
     display: block;
     position: relative;
@@ -76,6 +86,11 @@
   .item-des{
     padding:10px 0px 0px 0px;
   }
-
+  .img-search{
+    display: none;
+  }
+  .item input{
+    width: 100%;
+  }
 }
 

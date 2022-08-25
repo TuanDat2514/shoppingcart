@@ -14,8 +14,9 @@
     <div class="">
       <input type="password" placeholder="Password" name="psw" id="psw" required formControlName="password">
     </div>
+    <h5 *ngIf="message">{{message}}</h5>
     <button type="submit">Login</button>
-    <div style="display: flex;gap: 17%;height: 20%;align-items: center">
+    <div style="display: flex;gap: 17%;height: 15%;align-items: center">
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>

@@ -14,6 +14,10 @@ import {HttpClientModule} from "@angular/common/http";
 import { AddToppingComponent } from './home/add-topping/add-topping.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { RegisterComponent } from './home/register/register.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,10 @@ import {MatIconModule} from '@angular/material/icon';
     SidebarComponent,
     ModalCheckoutComponent,
     LoginComponent,
-    AddToppingComponent
+    AddToppingComponent,
+    RegisterComponent,
+    HomePageComponent,
+
   ],
     imports: [
         BrowserModule,
@@ -32,8 +39,7 @@ import {MatIconModule} from '@angular/material/icon';
         FormsModule,
         HttpClientModule,
         ReactiveFormsModule,
-      MatButtonModule,
-      MatIconModule
+      Ng2SearchPipeModule
     ],
   providers: [],
   bootstrap: [AppComponent]

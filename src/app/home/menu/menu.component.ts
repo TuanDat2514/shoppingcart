@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
   loading:boolean=false;
   selected:any;
   selectTopping:boolean=false;
+  seachText!:string;
   @Output() closebtn=new EventEmitter<boolean>();
   constructor(private data: DataService) {
   }
@@ -26,6 +27,7 @@ export class MenuComponent implements OnInit {
       clearTimeout(x);
     },1000)
     this.data.Total.subscribe(data=>this.total=data);
+    this.data.Itemfilter.subscribe(data=>this.item=data);
   }
   selectedItem(item:any){
     this.selected=item;

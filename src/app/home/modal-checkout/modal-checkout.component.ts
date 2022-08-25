@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+import { User } from 'src/data/interface/item';
 import {DataService} from "../../services/data.service";
 import {AddToppingComponent} from "../add-topping/add-topping.component";
 
@@ -11,6 +12,7 @@ export class ModalCheckoutComponent implements OnInit {
   itemscart = this.data.items;
   total = 0;
   inp = 0;
+  user: User =this.data.user.getValue();
   disabled: boolean = false;
   opendialog:boolean=false;
   @Output() closeModal = new EventEmitter<boolean>();
@@ -20,6 +22,8 @@ export class ModalCheckoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.data.Total.subscribe(data => this.total = data);
+    this.data.User.subscribe(data=>this.user=data);
+    console.log(this.user);
   }
 
   closemodal() {

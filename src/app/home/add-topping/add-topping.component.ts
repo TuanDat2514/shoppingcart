@@ -36,6 +36,14 @@ export class AddToppingComponent implements OnInit {
   ngOnInit(): void {
     this.data.Total.subscribe(data => this.total = data);
     this.checkTopping();
+    if(window.innerWidth>414){
+      this.showlist=[
+        {show: true},
+        {show: true},
+        {show: true},
+        {show: true}
+      ]
+    }
   }
 
   checkTopping() {

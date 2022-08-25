@@ -5,6 +5,7 @@ import {MenuComponent} from "./home/menu/menu.component";
 import {CartComponent} from "./home/cart/cart.component";
 import {LoginComponent} from "./home/login/login.component";
 import {AddToppingComponent} from "./home/add-topping/add-topping.component";
+import {HomePageComponent} from "./home-page/home-page.component";
 
 const routes: Routes = [
   {path:'addtopping',component:AddToppingComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'menu',component:MenuComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
+  {path:'homepage',component:HomePageComponent},
   {path:'',redirectTo:"/home",pathMatch:"full"}
 ];
 

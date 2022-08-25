@@ -1,5 +1,5 @@
 <div id="product_container" class="product">
   <div class="item" *ngFor="let item of category">
-    <div class="category">{{item}}</div>
+    <div class="category" (click)="click(item)" [class.color]="item.category===id">{{item.name}}</div>
   </div>
 </div>
