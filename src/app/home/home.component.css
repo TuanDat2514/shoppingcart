@@ -21,6 +21,19 @@ position: absolute;
 .overlay-banner-bg {
   background: rgba(0,0,0,0.4);
 }
+.abc{
+  position: absolute;
+  z-index: 10000;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  margin-top: 10%;
+}
+.dropUser{
+  cursor: pointer;
+  width: 5%;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 414px ){
   .cart-main{
     display: none;
@@ -59,15 +72,7 @@ position: absolute;
     padding-right: 0;
   }
   .btn-cart{
-    background-color: #008CBA;
-    position: fixed;
-    z-index: 1000;
-    top: 80%;
-    right: 11%;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: none;
+    display: none;
   }
   .btn-cart:focus{
     background-color: #036d8c;
@@ -128,6 +133,27 @@ position: absolute;
   }
   .add-topping{
     display: none;
+  }
+  .btn-cart{
+    display: block;
+    background-color: #008CBA;
+    position: fixed;
+    z-index: 1000;
+    top: 80%;
+    right: 11%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+  }
+  .footer{
+
+  }
+  .footer-content{
+    width: 100%;
+  }
+  .footer-content p{
+    width: 100%;
   }
 
 }

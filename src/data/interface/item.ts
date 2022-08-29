@@ -22,11 +22,11 @@ export interface Category{
   name:string;
   category:number;
 }
-export const _category:Category[]=[
-  {name:'Pizza',category:1},
-  {name:'Burger',category:2},
-];
-export const _item: Item[] = [
+// export const _category:Category[]=[
+//   {name:'Pizza',category:1},
+//   {name:'Burger',category:2},
+// ];
+/*export const _item: Item[] = [
   {
     id: 1,
     title: "Original",
@@ -91,7 +91,7 @@ export const _item: Item[] = [
     img: "./assets/images/istockphoto-1188412964-612x612.jpg",
     category: 2
   },
-]
+]*/
 
 export interface Pizza {
   description: string;
@@ -111,7 +111,7 @@ export interface Topping {
   category: number[];
 }
 
-export const _topping: Topping[] = [
+/*export const _topping: Topping[] = [
   {
     id: 1,
     name: 'Cheese',
@@ -146,6 +146,6 @@ export const _user: User[] = [
       {name:'Total > $200',condition: 200, discount: 40},
       {name:'Total > $0',condition: 0, discount: 20}]
   }
-]
+]*/
 
 

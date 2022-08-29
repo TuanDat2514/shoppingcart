@@ -1,8 +1,10 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {_item, Item, Topping} from "../../../data/interface/item";
-import {_topping} from "../../../data/interface/item";
+// import {_item, Item, Topping} from "../../../data/interface/item";
+import { Topping} from "../../../data/interface/item";
+// import {_topping} from "../../../data/interface/item";
 import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {DataService} from "../../services/data.service";
+import {logMessages} from "@angular-devkit/build-angular/src/builders/browser-esbuild/esbuild";
 
 @Component({
   selector: 'app-add-topping',
@@ -11,6 +13,7 @@ import {DataService} from "../../services/data.service";
 })
 export class AddToppingComponent implements OnInit {
   topping: Topping[] = [];
+  topimp:any;
   inpValue = 1;
   form!: FormGroup;
   total = 0;
@@ -34,8 +37,18 @@ export class AddToppingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.data.getTopping().subscribe(data=> {
+      this.topimp=data;
+      let check = this.selectedItem.category;
+      for (let i = 0; i < data.length; i++) {
+        let fitertop = data[i].category.find((value:any)=>value===check);
+        if (fitertop) {
+          this.topping.push(data[i]);
+        }
+      }
+      console.log(data[0].category);
+    })
     this.data.Total.subscribe(data => this.total = data);
-    this.checkTopping();
     if(window.innerWidth>414){
       this.showlist=[
         {show: true},
@@ -45,17 +58,6 @@ export class AddToppingComponent implements OnInit {
       ]
     }
   }
-
-  checkTopping() {
-    let check = this.selectedItem.category;
-    for (let i = 0; i < _topping.length; i++) {
-      let fitertop = _topping[i].category.find(value => value == check)
-      if (fitertop) {
-        this.topping.push(_topping[i]);
-      }
-    }
-  }
-
   control(i: any) {
     this.inpValue = this.inpValue + i;
   }
@@ -73,12 +75,10 @@ export class AddToppingComponent implements OnInit {
   addtocart() {
     this.data.changeBool(true);
     let selectedTopping = [];
-    // selectedTopping=_topping[0].options.find(value => value.name==this.inp[0].input);
-    // console.log(selectedTopping)
     for (let i = 0; i < this.inp.length; i++) {
       if (this.inp[i].input!='') {
-        for (let j = 0; j < _topping.length; j++) {
-          let check=_topping[j].options.find(value =>value.name == this.inp[i].input)
+        for (let j = 0; j < this.topimp.length; j++) {
+          let check=this.topimp[j].options.find((value:any) =>value.name == this.inp[i].input)
           if(check){
             selectedTopping.push(check);
             this.totaltopping=this.totaltopping+check.price;

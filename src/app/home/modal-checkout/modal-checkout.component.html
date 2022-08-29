@@ -17,6 +17,11 @@
       <div class="cart-item" *ngFor="let item of itemscart;let i=index">
         <div class="w20">
           <img class="w20 cart-item-img" src={{item.img}}/>
+          <div class="w10 mobile">
+            <button class="btn-control" (click)="control(-1,i,item)">-</button>
+            <input [(ngModel)]="item.qty" class="inp-qty" type="text" style="width: 40px;text-align: center"/>
+            <button class="btn-control" (click)="control(1,i,item)">+</button>
+          </div>
         </div>
         <div class="w30">
           <div class="textBold">{{item.title}}</div>
@@ -27,13 +32,13 @@
             </button>
           </div>
         </div>
-        <div class="w10 textBold">{{item.price|currency}}</div>
-        <div class="w10">
+        <div class="w10 textBold price1">{{item.price|currency}}</div>
+        <div class="w10 desktop">
           <button class="btn-control" (click)="control(-1,i,item)">-</button>
           <input [(ngModel)]="item.qty" class="inp-qty" type="text" style="width: 40px;text-align: center"/>
           <button class="btn-control" (click)="control(1,i,item)">+</button>
         </div>
-        <div class="w10">
+        <div class="w10 remove">
           <button class="button-remove" (click)="removeItem(i,item)">Remove</button>
         </div>
         <div class="w20 textRight textBold">{{item.total|currency}}</div>

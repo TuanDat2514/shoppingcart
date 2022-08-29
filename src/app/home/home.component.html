@@ -7,7 +7,7 @@
     <div class="nav" fxLayoutGap>
       <div>
         <ul class="menu">
-          <li class="menu-item" (click)="a('/homepage')" ><a>Home</a></li>
+          <li class="menu-item" (click)="a('/homepage')"><a>Home</a></li>
           <li class="menu-item"><a>Menu</a></li>
           <li class="menu-item"><a>Discount</a></li>
           <li class="menu-item"><a>About</a></li>
@@ -27,7 +27,7 @@
           <p>Location</p>
         </a>
       </div>
-      <ng-container  *ngIf="submitted;else login">
+      <ng-container *ngIf="submitted;else login">
         <div class="btn-signup">
           <a class="signup">
             <p>Sign up</p>
@@ -41,25 +41,29 @@
         </div>
       </ng-container>
       <ng-template #login>
-            <img style="width: 5%;border-radius: 50%;" src="{{user.img}}">
+        <img class="dropUser" (focusout)="dropu()" (click)="dropu()" src="{{user.img}}">
+          <ul class="abc" *ngIf="dropuser">
+            <li class="main-content">Profile</li>
+            <li class="main-content">Log out</li>
+          </ul>
       </ng-template>
     </div>
     <div class="btn-menu" (click)="click1()">
       <img src="/assets/images/icons8-menu-90.png">
     </div>
   </div>
-     <ul style="text-align: right" class="dropdown dropdown_menu-6" *ngIf="drop1">
-       <li class="dropdown_item-1">Home</li>
-       <li class="dropdown_item-1">Menu</li>
-       <li class="dropdown_item-1">Discount</li>
-       <li class="dropdown_item-1">About</li>
-       <li class="dropdown_item-1">Support</li>
-       <li class="dropdown_item-1">Sign up</li>
-       <li class="dropdown_item-1">Sign in</li>
-     </ul>
-    <ul class="dropdown dropdown_menu-6" *ngIf="drop">
-      <li *ngFor="let i of siderbar.category" (click)="siderbar.click(i)" class="dropdown_item-1">{{i.name}}</li>
-    </ul>
+  <ul style="text-align: right" class="dropdown dropdown_menu-6" *ngIf="drop1">
+    <li class="dropdown_item-1">Home</li>
+    <li class="dropdown_item-1">Menu</li>
+    <li class="dropdown_item-1">Discount</li>
+    <li class="dropdown_item-1">About</li>
+    <li class="dropdown_item-1">Support</li>
+    <li class="dropdown_item-1">Sign up</li>
+    <li class="dropdown_item-1">Sign in</li>
+  </ul>
+  <ul class="dropdown dropdown_menu-6" *ngIf="drop">
+    <!--      <li *ngFor="let i of siderbar.category" (click)="siderbar.click(i)" class="dropdown_item-1">{{i.name}}</li>-->
+  </ul>
 </div>
 <div class="wrapper">
   <div class="banner">
@@ -84,7 +88,7 @@
     </div>
     <!--      Menu-->
     <div class="menu-main" fxFlex="700px">
-      <app-menu (closebtn)="onHandler($event)" ></app-menu>
+      <app-menu (closebtn)="onHandler($event)"></app-menu>
     </div>
     <!--      Cart-->
     <div class="cart-main" fxFlex>
@@ -97,6 +101,13 @@
   <div class="login" *ngIf="showLogin">
     <app-login (closeSignin)="close($event)"></app-login>
   </div>
+  <div class="footer">
+    <div class="footer-content">
+      <p>
+        TRỊNH TUẤN ĐẠT
+      </p>
+    </div>
+  </div>
 </div>
 <!--iphone6/7/8 plus-->
 
@@ -107,11 +118,4 @@
 
 
 
-<!--<div class="footer">
-  <div class="footer-content">
-    <p>
-      Sample text. Click to select the text box. Click again or double click to start editing the text.
-    </p>
-  </div>
-</div>-->
 

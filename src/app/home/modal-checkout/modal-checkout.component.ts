@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import { User } from 'src/data/interface/item';
+// import { User } from 'src/data/interface/item';
 import {DataService} from "../../services/data.service";
 import {AddToppingComponent} from "../add-topping/add-topping.component";
 
@@ -12,7 +12,7 @@ export class ModalCheckoutComponent implements OnInit {
   itemscart = this.data.items;
   total = 0;
   inp = 0;
-  user: User =this.data.user.getValue();
+  user:any=this.data.user;
   disabled: boolean = false;
   opendialog:boolean=false;
   @Output() closeModal = new EventEmitter<boolean>();
@@ -23,16 +23,17 @@ export class ModalCheckoutComponent implements OnInit {
   ngOnInit(): void {
     this.data.Total.subscribe(data => this.total = data);
     this.data.User.subscribe(data=>this.user=data);
-    console.log(this.user);
+    console.log();
   }
 
   closemodal() {
     this.closeModal.emit(false);
+    let i=document.getElementById('btn-cart') as HTMLElement;
+    i.style.display="block";
   }
 
   control(i: any, index: any, item: any) {
     const t=item.total;
-    console.log(t);
     if (item.qty >= 0) {
       this.disabled = false;
       this.data.items[index].qty += i;

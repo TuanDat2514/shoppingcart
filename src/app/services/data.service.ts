@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {Item, User} from "../../data/interface/item";
 import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class DataService {
   Bool=this.bool.asObservable()
   submitted=new BehaviorSubject<boolean>(true);
   Submitted=this.submitted.asObservable();
+  URL="http://localhost:3000/";
   user=new BehaviorSubject<User>({
     id: 0,
     username: '',
@@ -49,5 +51,20 @@ export class DataService {
   }
   changeItems(item:any){
     this.itemfilter.next(item);
+  }
+  getAllItems():Observable<any>{
+    return this.http.get(this.URL+environment.ITEMS);
+  }
+  getItembyCategory(category:number):Observable<Array<Item>>{
+    return this.http.get<Array<Item>>(this.URL+environment.CATEGORY_ITEM+category);
+  }
+  getCategory():Observable<any>{
+    return this.http.get(this.URL+environment.CATEGORY);
+  }
+  getTopping():Observable<any>{
+    return this.http.get(this.URL+environment.TOPPING);
+  }
+  getUser(username:string):Observable<any>{
+    return this.http.get(environment.URL+environment.USER+environment.USERNAME+username);
   }
 }

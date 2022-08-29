@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Original",
+      "ingredient": "Tomato sauce, mozzarella & oregano",
+      "price": 18,
+      "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "title": "Salami",
+      "ingredient": "Tomato sauce, mozzarella & mild salami",
+      "price": 15,
+      "img": "./assets/images/sdw.jpg",
+      "category": 1
+    },
+    {
+      "id": 3,
+      "title": "Hawaiian",
+      "ingredient": "Tomato sauce, mozzarella, ham & pineapple",
+      "price": 16,
+      "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+      "category": 1
+    },
+    {
+      "id": 4,
+      "title": "Chicken",
+      "ingredient": "Tomato sauce, mozzarella, chicken, pineapple & bbq sauce",
+      "price": 25,
+      "img": "./assets/images/pizza-dark-background-classic-italian-pizza-with-tomatoes-pepper-vegetables-sauce-mozarella-cheese-dark-kitchen-table-copy-space_90380-947.jpg",
+      "category": 1
+    },
+    {
+      "id": 5,
+      "title": "Chili Pie",
+      "ingredient": "Tomato sauce, mozzarella & mild salami",
+      "price": 15,
+      "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+      "category": 2
+    },
+    {
+      "id": 6,
+      "title": "BBQ",
+      "ingredient": "Tomato sauce, mozzarella & mild salami",
+      "price": 15,
+      "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+      "category": 2
+    },
+    {
+      "id": 7,
+      "title": "Chessesteak",
+      "ingredient": "Tomato sauce, mozzarella & mild salami",
+      "price": 15,
+      "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+      "category": 2
+    },
+    {
+      "id": 8,
+      "title": "Breakfast",
+      "ingredient": "Tomato sauce, mozzarella & mild salami",
+      "price": 15,
+      "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+      "category": 2
+    }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

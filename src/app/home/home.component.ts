@@ -20,9 +20,11 @@ export class HomeComponent implements OnInit {
   showCart1:boolean=true;
   submitted=this.data.submitted.value;
   user!:User;
+  dropuser:boolean=false;
   ngOnInit(): void {
     this.data.Submitted.subscribe(data=>this.submitted=data);
     this.data.User.subscribe((user:User)=>this.user=user)
+
   }
   onHandler(event:any){
     this.showCart=event;
@@ -48,5 +50,10 @@ export class HomeComponent implements OnInit {
   }
   openCart(){
     this.showCart=!this.showCart;
+    let i=document.getElementById('btn-cart') as HTMLElement;
+    i.style.display="none";
+  }
+  dropu(){
+    this.dropuser=!this.dropuser;
   }
 }

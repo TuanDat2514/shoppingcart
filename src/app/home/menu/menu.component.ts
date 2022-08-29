@@ -1,8 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import * as item from 'src/data/interface/item';
+// import * as item from 'src/data/interface/item';
 import {DataService} from "../../services/data.service";
-import {_item} from "src/data/interface/item";
-import {_topping} from "src/data/interface/item";
+// import {_item} from "src/data/interface/item";
+// import {_topping} from "src/data/interface/item";
 
 @Component({
   selector: 'app-menu',
@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     const x=setTimeout(()=>{
-      this.item=_item;
+      this.data.getAllItems().subscribe(data=>this.item=data);
       this.loading=true;
       clearTimeout(x);
     },1000)
