@@ -12,11 +12,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './home/login/login.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AddToppingComponent } from './home/add-topping/add-topping.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { RegisterComponent } from './home/register/register.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { NavigatorComponent } from './navigator/navigator.component';
+import { ProfileUserComponent } from './profile-user/profile-user.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     AddToppingComponent,
     RegisterComponent,
     HomePageComponent,
+    NavigatorComponent,
+    ProfileUserComponent,
 
   ],
     imports: [

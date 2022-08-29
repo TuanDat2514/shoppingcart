@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StickyComponent } from './sticky.component';
+import { ProfileUserComponent } from './profile-user.component';
 
-describe('StickyComponent', () => {
-  let component: StickyComponent;
-  let fixture: ComponentFixture<StickyComponent>;
+describe('ProfileUserComponent', () => {
+  let component: ProfileUserComponent;
+  let fixture: ComponentFixture<ProfileUserComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StickyComponent ]
+      declarations: [ ProfileUserComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StickyComponent);
+    fixture = TestBed.createComponent(ProfileUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

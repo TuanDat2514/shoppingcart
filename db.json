@@ -163,6 +163,13 @@
           "discount": 20
         }
       ]
+    },
+    {
+      "username": "tuandat",
+      "password": "tuandat",
+      "img": "",
+      "discount": [],
+      "id": 3
     }
   ],
   "category": [

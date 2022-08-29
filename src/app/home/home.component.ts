@@ -30,9 +30,10 @@ export class HomeComponent implements OnInit {
     this.showCart=event;
     this.showCart1=event;
     this.drop=event;
+    this.showLogin=event;
   }
-  clickLogin(){
-    this.showLogin=true;
+  onLogin(event:any){
+    this.showLogin=event;
   }
   close(event:any){
     this.showLogin=event;
@@ -52,8 +53,5 @@ export class HomeComponent implements OnInit {
     this.showCart=!this.showCart;
     let i=document.getElementById('btn-cart') as HTMLElement;
     i.style.display="none";
-  }
-  dropu(){
-    this.dropuser=!this.dropuser;
   }
 }
