@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   @ViewChild(SidebarComponent) siderbar!:SidebarComponent;
   constructor(private data:DataService,private route:Router) { }
   showLogin:boolean=false;
+  showRegister:boolean=false;
   showCart:boolean=false;
   showCart1:boolean=true;
   submitted=this.data.submitted.value;
@@ -42,9 +43,8 @@ export class HomeComponent implements OnInit {
    this.drop=!this.drop;
    this.drop1=false;
   }
-  click1(){
-    this.drop1=!this.drop1;
-    this.drop=false;
+  click1(event:any){
+  this.showRegister=event;
   }
   a(a:any){
     this.route.navigate([a]);

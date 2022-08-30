@@ -1,5 +1,5 @@
 <div class="header">
- <app-navigator (showLogin)="onLogin($event)"></app-navigator>
+ <app-navigator (showLogin)="onLogin($event)" (showRegister)="click1($event)"></app-navigator>
 </div>
 <div class="wrapper">
   <div class="banner">
@@ -34,12 +34,6 @@
       <app-modal-checkout (closeModal)="onHandler($event)"></app-modal-checkout>
     </div>
   </div>
-  <div class="login" *ngIf="showLogin">
-    <app-login (closeSignin)="close($event)"></app-login>
-  </div>
-<!--  <div class="login">-->
-<!--    <app-register></app-register>-->
-<!--  </div>-->
   <div class="footer">
     <div class="footer-content">
       <h1>

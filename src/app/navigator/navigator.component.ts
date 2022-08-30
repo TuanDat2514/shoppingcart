@@ -11,10 +11,11 @@ import {Router} from "@angular/router";
 export class NavigatorComponent implements OnInit {
   drop:boolean=false;
   drop1:boolean=false;
-  @Output() showLogin=new EventEmitter<boolean>;
   user!:User;
   submitted=this.data.submitted.value;
   dropuser:boolean=false;
+  showLogin:boolean=false;
+  showRegister:boolean=false;
   constructor(private data:DataService,private route:Router) { }
 
   ngOnInit(): void {
@@ -36,6 +37,15 @@ export class NavigatorComponent implements OnInit {
     this.drop=false;
   }
   clickLogin(){
-    this.showLogin.emit(true);
+    this.showLogin=!this.showLogin
+  }
+  clickSignup(){
+    this.showRegister=!this.showRegister;
+  }
+  closeLogin(event:any){
+    this.showLogin=event;
+  }
+  closeRegister(event:any){
+    this.showRegister=event;
   }
 }

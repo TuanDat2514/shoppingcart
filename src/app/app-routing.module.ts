@@ -7,6 +7,7 @@ import {LoginComponent} from "./home/login/login.component";
 import {AddToppingComponent} from "./home/add-topping/add-topping.component";
 import {HomePageComponent} from "./home-page/home-page.component";
 import {RegisterComponent} from "./home/register/register.component";
+import {ProfileUserComponent} from "./profile-user/profile-user.component";
 
 const routes: Routes = [
   {path:'addtopping',component:AddToppingComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'homepage',component:HomePageComponent},
+  {path:'user',component:ProfileUserComponent},
   {path:'',redirectTo:"/home",pathMatch:"full"}
 ];
 

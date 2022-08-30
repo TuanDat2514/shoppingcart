@@ -1,12 +1,12 @@
 import {HttpClient, HttpParams} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {environment} from "../../../environments/environment";
+import {User} from "../../../data/interface/item";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
   public username!:String;
   public password!:String;
   USER_NAME_SESSION = 'username_session';
@@ -17,6 +17,9 @@ export class AuthService {
       .set('username',username)
       .set('password',password);
     return this.http.get<Response>(environment.URL+environment.USERLOGIN+params)
+  }
+  register(user:any){
+    return this.http.post<Response>(environment.URL+environment.USER,user,{ observe: 'response' });
   }
   registerSuccessfulLogin(username:any) {
     sessionStorage.setItem(this.USER_NAME_SESSION, username)

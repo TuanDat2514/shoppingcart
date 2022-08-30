@@ -170,6 +170,27 @@
       "img": "",
       "discount": [],
       "id": 3
+    },
+    {
+      "username": "tuandat25",
+      "password": "tuandat25",
+      "img": "",
+      "discount": [],
+      "id": 4
+    },
+    {
+      "username": "tuandat0",
+      "password": "tuandat0",
+      "img": "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",
+      "discount": [],
+      "id": 5
+    },
+    {
+      "username": "tuandat0",
+      "password": "tuandat0",
+      "img": "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",
+      "discount": [],
+      "id": 6
     }
   ],
   "category": [
@@ -180,6 +201,40 @@
     {
       "name": "Burger",
       "category": 2
+    }
+  ],
+  "detail": [
+    {
+      "id": 1,
+      "id_item": 1,
+      "billId": 1
+    },
+    {
+      "id": 2,
+      "id_item": 2,
+      "billId": 1
+    },
+    {
+      "id": 3,
+      "id_item": 1,
+      "billId": 1
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
+      "total": 30,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "total": 20,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "total": 25,
+      "userId": 1
     }
   ]
 }

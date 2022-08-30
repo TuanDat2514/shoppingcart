@@ -85,6 +85,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .main-content{
   list-style-type: none;
+  cursor: pointer;
 }
 .dropdown-content{
   color: black;
@@ -299,13 +300,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: #fefefe;
   font-size: 16px;
 }
-.login{
-  position: fixed;
-  width: 100%;
-  background: rgba(0,0,0,0.2);
-  top: 0;
-  height: 100%;
-}
+
 .loading{
 
   left: 40%;

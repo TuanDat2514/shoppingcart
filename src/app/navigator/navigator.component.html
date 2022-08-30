@@ -1,66 +1,72 @@
 <div class="navigator" fxLayout="row" fxLayoutAlign="space-between center">
-    <div class="btn-menu menu1" (click)="click()">
-      <img src="/assets/images/icons8-menu-90.png">
+  <div class="btn-menu menu1" (click)="click()">
+    <img src="/assets/images/icons8-menu-90.png">
+  </div>
+  <img class="logo" src="./assets/images/logo21123123.png">
+  <div class="nav" fxLayoutGap>
+    <div>
+      <ul class="menu">
+        <li class="menu-item" (click)="a('/homepage')"><a>Home</a></li>
+        <li class="menu-item" (click)="a('/home')"><a>Menu</a></li>
+        <li class="menu-item"><a>Discount</a></li>
+        <li class="menu-item"><a>About</a></li>
+        <li class="menu-item">
+          <a>Support</a>
+          <ul class="dropdown-content">
+            <li class="main-content">Link 1</li>
+            <li class="main-content">Link 2</li>
+            <li class="main-content">Link 3</li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <img class="logo" src="./assets/images/logo21123123.png">
-    <div class="nav" fxLayoutGap>
-      <div>
-        <ul class="menu">
-          <li class="menu-item" (click)="a('/homepage')"><a>Home</a></li>
-          <li class="menu-item"><a>Menu</a></li>
-          <li class="menu-item"><a>Discount</a></li>
-          <li class="menu-item"><a>About</a></li>
-          <li class="menu-item">
-            <a>Support</a>
-            <ul class="dropdown-content">
-              <li class="main-content">Link 1</li>
-              <li class="main-content">Link 2</li>
-              <li class="main-content">Link 3</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="btn-location">
-        <a class="location">
-          <img src="https://icon-library.com/images/location-icon-white/location-icon-white-2.jpg" alt="">
-          <p>Location</p>
+    <div class="btn-location">
+      <a class="location">
+        <img src="https://icon-library.com/images/location-icon-white/location-icon-white-2.jpg" alt="">
+        <p>Location</p>
+      </a>
+    </div>
+    <ng-container *ngIf="submitted;else login">
+      <div class="btn-signup">
+        <a class="signup" (click)="clickSignup()">
+          <p>Sign up</p>
         </a>
       </div>
-      <ng-container *ngIf="submitted;else login">
-        <div class="btn-signup">
-          <a class="signup">
-            <p>Sign up</p>
-          </a>
-        </div>
-        <div class="btn-signin">
-          <a class="signin" (click)="clickLogin()">
-            <img src="./assets/images/login-sketch.png" alt="">
-            <p>Sign in</p>
-          </a>
-        </div>
-      </ng-container>
-      <ng-template #login>
-        <img class="dropUser" (focusout)="dropu()" (click)="dropu()" src="{{user.img}}">
-        <ul class="abc" *ngIf="dropuser">
-          <li class="main-content">Profile</li>
-          <li class="main-content">Log out</li>
-        </ul>
-      </ng-template>
-    </div>
-    <div class="btn-menu" (click)="click1()">
-      <img src="/assets/images/icons8-menu-90.png">
-    </div>
+      <div class="btn-signin">
+        <a class="signin" (click)="clickLogin()">
+          <img src="./assets/images/login-sketch.png" alt="">
+          <p>Sign in</p>
+        </a>
+      </div>
+    </ng-container>
+    <ng-template #login>
+      <img class="dropUser" (focusout)="dropu()" (click)="dropu()" src="{{user.img}}">
+      <ul class="abc" *ngIf="dropuser">
+        <li class="main-content" (click)="a('/user')">Profile</li>
+        <li class="main-content">Log out</li>
+      </ul>
+    </ng-template>
   </div>
-  <ul style="text-align: right" class="dropdown dropdown_menu-6" *ngIf="drop1">
-    <li class="dropdown_item-1">Home</li>
-    <li class="dropdown_item-1">Menu</li>
-    <li class="dropdown_item-1">Discount</li>
-    <li class="dropdown_item-1">About</li>
-    <li class="dropdown_item-1">Support</li>
-    <li class="dropdown_item-1">Sign up</li>
-    <li class="dropdown_item-1">Sign in</li>
-  </ul>
-  <ul class="dropdown dropdown_menu-6" *ngIf="drop">
-    <!--      <li *ngFor="let i of siderbar.category" (click)="siderbar.click(i)" class="dropdown_item-1">{{i.name}}</li>-->
-  </ul>
+  <div class="btn-menu" (click)="click1()">
+    <img src="/assets/images/icons8-menu-90.png">
+  </div>
+  <div class="login" style="z-index: 1000;" *ngIf="showLogin">
+    <app-login (closeSignin)="closeLogin($event)"></app-login>
+  </div>
+  <div class="login" style="z-index: 1000;" *ngIf="showRegister">
+    <app-register (closeRegister)="closeRegister($event)"></app-register>
+  </div>
+</div>
+<ul style="text-align: right" class="dropdown dropdown_menu-6" *ngIf="drop1">
+  <li class="dropdown_item-1">Home</li>
+  <li class="dropdown_item-1">Menu</li>
+  <li class="dropdown_item-1">Discount</li>
+  <li class="dropdown_item-1">About</li>
+  <li class="dropdown_item-1">Support</li>
+  <li class="dropdown_item-1">Sign up</li>
+  <li class="dropdown_item-1">Sign in</li>
+</ul>
+<ul class="dropdown dropdown_menu-6" *ngIf="drop">
+  <!--      <li *ngFor="let i of siderbar.category" (click)="siderbar.click(i)" class="dropdown_item-1">{{i.name}}</li>-->
+</ul>
 

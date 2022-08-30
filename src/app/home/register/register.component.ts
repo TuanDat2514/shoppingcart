@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {User} from "../../../data/interface/item";
+import {AuthService} from "../../services/auth/auth.service";
 
 @Component({
   selector: 'app-register',
@@ -8,7 +10,9 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class RegisterComponent implements OnInit {
   registerForm!:FormGroup;
-  constructor(private fb:FormBuilder) { }
+  user!:User;
+  @Output() closeRegister=new EventEmitter<boolean>;
+  constructor(private fb:FormBuilder,private authService:AuthService) { }
 
   ngOnInit(): void {
     this.registerForm=this.fb.group({
@@ -20,7 +24,13 @@ export class RegisterComponent implements OnInit {
     })
   }
   onSubmit(){
-
+    if(this.registerForm.value.password==this.registerForm.value.confirmPassword){
+      let u={username:this.registerForm.value.username,password:this.registerForm.value.password,img:"https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",discount:[]}
+      this.authService.register(u).subscribe((response)=>{});
+    }
+  }
+  close(){
+    this.closeRegister.emit(false);
   }
 }
 
