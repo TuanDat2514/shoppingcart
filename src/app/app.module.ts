@@ -17,6 +17,8 @@ import { RegisterComponent } from './home/register/register.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavigatorComponent } from './navigator/navigator.component';
 import { ProfileUserComponent } from './profile-user/profile-user.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -36,10 +38,12 @@ import { ProfileUserComponent } from './profile-user/profile-user.component';
   ],
     imports: [
         BrowserModule,
+      BrowserAnimationsModule,
         RouterModule,
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
+      MatFormFieldModule,
         ReactiveFormsModule,
       Ng2SearchPipeModule
     ],

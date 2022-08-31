@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
         //   this.data.changeUser(data);
         // });
         this.data.changeUser(this.user[0]);
+
         this.closeSignin.emit(false);
       }
       else {

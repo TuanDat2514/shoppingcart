@@ -1,3 +1,60 @@
-<div class="">
-  <app-navigator></app-navigator>
+<app-navigator></app-navigator>
+<div class="profile">
+  <div class="body-profile">
+    <div class="header-profile">
+      <div class="header-profile-img">
+        <img src={{user.img}}>
+      </div>
+      <div class="header-profile-content">
+        <div class="profile-des">
+          <img src="/assets/images/logo21123123.png">
+          <h3 class="profile-name">TRỊNH TUẤN ĐẠT</h3>
+          <p class="profile-ingredient">ABC</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-profile" fxLayoutAlign=" stretch">
+      <div class="task-profile">
+        <ul class="list-task">
+          <li>Account Infomation</li>
+          <li>Transaction History</li>
+          <li>Shipping Address</li>
+          <li>My Rewards</li>
+          <li>Log Out</li>
+        </ul>
+      </div>
+      <div class="content-profile">
+        <div class="title-content-profile">
+          <div style="padding: 5px 5px 5px 30px;font-weight: bold">Account Infomation</div>
+          <img src="assets/images/icons8-pen-67.png">
+        </div>
+        <div class="body-content-profile">
+          <form class="form">
+            <div class="input-form">
+              <label for="fullname">Fullname</label>
+              <input id="fullname" class="w3-input" placeholder="Fullname" type="text">
+            </div>
+            <div class="input-form">
+              <label for="email">Email</label>
+              <input id="email" class="w3-input" placeholder="Email" type="text">
+            </div>
+            <div class="input-form">
+              <label >Gender</label>
+              <div>
+              <label for="male">Male</label>
+              <input id="male" type="radio">
+              <label for="female">Female</label>
+              <input id="female" type="radio">
+              </div>
+            </div>
+            <div class="input-form">
+              <label for="address">Address</label>
+              <input id="address" class="w3-input" placeholder="Address" type="text">
+            </div>
+            <button>UPDATE MY PROFILE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
