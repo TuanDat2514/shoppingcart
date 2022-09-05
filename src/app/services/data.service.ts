@@ -77,4 +77,10 @@ export class DataService {
   postBill(bill:any){
     return this.http.post<Response>(environment.URL+environment.BILL,bill,{ observe: 'response'});
   }
+  getBill():Observable<any>{
+    return this.http.get(environment.URL+environment.BILL);
+  }
+  postDetail(detail:any){
+    return this.http.post<Response>(environment.URL+environment.DETAIL,detail,{ observe: 'response'});
+  }
 }

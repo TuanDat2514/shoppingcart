@@ -22,7 +22,10 @@ export const environment = {
   CATEGORY:"category/",
 
   //bill
-  BILL:"bill/"
+  BILL:"bills/",
+
+  //detail
+  DETAIL:"detail/"
 };
 /*
  * For easier debugging in development mode, you can import the following file

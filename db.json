@@ -138,7 +138,7 @@
   "user": [
     {
       "id": 1,
-      "fullname": "Tuấn Đạt",
+      "fullname": "Trịnh Tuấn Đạt",
       "email": "dattuantrinh77@gmail.com",
       "gender": 1,
       "address": "Bắc Giang",
@@ -249,6 +249,77 @@
       "itemsId": 1,
       "toppingId": 31,
       "billId": 1
+    },
+    {
+      "itemsId": 1,
+      "billId": "",
+      "id": 4
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 13,
+      "billId": "",
+      "id": 5
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 23,
+      "billId": "",
+      "id": 6
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 13,
+      "billId": 5,
+      "id": 7
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 23,
+      "billId": 5,
+      "id": 8
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 13,
+      "billId": 6,
+      "id": 9
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 22,
+      "billId": 6,
+      "id": 10
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 13,
+      "billId": "",
+      "id": 11
+    },
+    {
+      "itemsId": 1,
+      "toppingId": 23,
+      "billId": "",
+      "id": 12
+    },
+    {
+      "itemsId": 6,
+      "toppingId": 12,
+      "billId": "",
+      "id": 13
+    },
+    {
+      "itemsId": 6,
+      "toppingId": 31,
+      "billId": "",
+      "id": 14
+    },
+    {
+      "itemsId": 6,
+      "toppingId": 31,
+      "billId": "",
+      "id": 15
     }
   ],
   "bills": [
@@ -271,6 +342,51 @@
       "total": 30,
       "userId": 1,
       "id": 4
+    },
+    {
+      "id": 5,
+      "total": 49,
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "total": 26,
+      "userId": 0
+    },
+    {
+      "id": 7,
+      "total": 23,
+      "userId": 0
+    },
+    {
+      "id": 8,
+      "total": 50,
+      "userId": 1
+    },
+    {
+      "id": 9,
+      "total": 56,
+      "userId": 0
+    },
+    {
+      "id": 10,
+      "total": 47,
+      "userId": 0
+    },
+    {
+      "id": 11,
+      "total": 45,
+      "userId": 0
+    },
+    {
+      "id": 12,
+      "total": 56,
+      "userId": 0
+    },
+    {
+      "id": 13,
+      "total": 45,
+      "userId": 0
     }
   ]
 }

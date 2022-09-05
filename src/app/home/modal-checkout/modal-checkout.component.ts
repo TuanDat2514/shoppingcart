@@ -72,11 +72,27 @@ export class ModalCheckoutComponent implements OnInit {
   confirmCheckout(){
     this.loading=true;
     this.opendialog=false;
-    let detail={itemsId:'',toppingId:'',billId:''};
-    let bill={total:this.total,userId:this.user.id};
-    setTimeout(() =>{
+
+    let bill={id:'',total:this.total,userId:this.user.id};
+    this.data.postBill(bill).subscribe();
+    let x=setTimeout(() =>{
       this.loading=false
+      for (let i=0;i<this.itemscart.length;i++){
+        for (let j=0;j<this.itemscart[i].toppings[0].length;j++){
+          console.log(this.itemscart[i].id+" : "+this.itemscart[i].toppings[0][j].id);
+          let detail={itemsId:'',toppingId:'',billId:''};
+          this.data.getBill().subscribe(data=>{
+            detail.billId=data[data.length-1].id;
+          })
+          detail.itemsId=this.itemscart[i].id;
+          detail.toppingId=this.itemscart[i].toppings[0][j].id
+          console.log(detail);
+          this.data.postDetail(detail).subscribe();
+        }
+      }
+      clearTimeout(x);
     },3000);
+
   }
   opencloseDialog() {
     this.opendialog=!this.opendialog;
