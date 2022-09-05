@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {Item, User} from "../../data/interface/item";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaderResponse} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 
 @Injectable({
@@ -18,6 +18,10 @@ export class DataService {
   URL="http://localhost:3000/";
   user=new BehaviorSubject<User>({
     id: 0,
+    fullname:'',
+    email: '',
+    gender: 0,
+    address: '',
     username: '',
     password: '',
     img: '',
@@ -66,5 +70,11 @@ export class DataService {
   }
   getUser(username:string):Observable<any>{
     return this.http.get(environment.URL+environment.USER+environment.USERNAME+username);
+  }
+  updateUser(user:User){
+    return this.http.put(environment.URL+environment.USER+user.id,user,{ observe: 'response'});
+  }
+  postBill(bill:any){
+    return this.http.post<Response>(environment.URL+environment.BILL,bill,{ observe: 'response'});
   }
 }

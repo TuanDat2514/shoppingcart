@@ -53,7 +53,7 @@
       <div class="big-text" id="cart-total-price" style="width: 100%">{{total|currency}}</div>
     </div>
     <div class="cart-checkout">
-      <button class="button-checkout" (click)="openDialog()">Checkout
+      <button class="button-checkout" (click)="opencloseDialog()">Checkout
       </button>
     </div>
     <div class="loading" *ngIf="loading">
@@ -65,7 +65,7 @@
   <dialog [open]="opendialog" class="dialog-content"><p>Are you sure this bill?</p>
     <div class="btn-dialog">
       <button class="btn-action confirm" (click)="confirmCheckout()"><p>Confirm</p></button>
-      <button class="btn-action cancel" (click)="closeDialog()"><p>Cancel</p></button>
+      <button class="btn-action cancel" (click)="opencloseDialog()"><p>Cancel</p></button>
     </div>
   </dialog>
 </div>

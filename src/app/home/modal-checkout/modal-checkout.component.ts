@@ -72,16 +72,16 @@ export class ModalCheckoutComponent implements OnInit {
   confirmCheckout(){
     this.loading=true;
     this.opendialog=false;
+    let detail={itemsId:'',toppingId:'',billId:''};
+    let bill={total:this.total,userId:this.user.id};
     setTimeout(() =>{
       this.loading=false
     },3000);
   }
-  openDialog() {
-    this.opendialog=true;
+  opencloseDialog() {
+    this.opendialog=!this.opendialog;
   }
-  closeDialog(){
-    this.opendialog=false;
-  }
+
   removeTopping(topping:any,indexItem:any,j:any){
     let i=this.data.items[indexItem].toppings[0][j].price;
     this.data.items[indexItem].toppings[0].splice(j,1);

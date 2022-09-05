@@ -19,7 +19,10 @@ export const environment = {
   USERNAME:"?username=",
 
   //category
-  CATEGORY:"category/"
+  CATEGORY:"category/",
+
+  //bill
+  BILL:"bill/"
 };
 /*
  * For easier debugging in development mode, you can import the following file

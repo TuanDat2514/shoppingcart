@@ -9,6 +9,10 @@ export interface Item {
 
 export interface User {
   id: number;
+  fullname: string,
+  email: string,
+  gender: number,
+  address: string,
   username: string;
   password: string;
   img: string;

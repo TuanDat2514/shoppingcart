@@ -71,14 +71,17 @@
       "name": "Cheese",
       "options": [
         {
+          "id": 11,
           "name": "Extra Cheese",
           "price": 0
         },
         {
+          "id": 12,
           "name": "Double Cheese",
           "price": 4
         },
         {
+          "id": 13,
           "name": "Triple Cheese",
           "price": 8
         }
@@ -93,14 +96,17 @@
       "name": "Crust",
       "options": [
         {
+          "id": 21,
           "name": "Thin Crust",
           "price": 0
         },
         {
+          "id": 22,
           "name": "Handtossed",
           "price": 0
         },
         {
+          "id": 23,
           "name": "New York Crust",
           "price": 0
         }
@@ -114,10 +120,12 @@
       "name": "Meat",
       "options": [
         {
+          "id": 31,
           "name": " Extra Meat",
           "price": 0
         },
         {
+          "id": 32,
           "name": "Double Meat",
           "price": 5
         }
@@ -130,6 +138,10 @@
   "user": [
     {
       "id": 1,
+      "fullname": "Tuấn Đạt",
+      "email": "dattuantrinh77@gmail.com",
+      "gender": 1,
+      "address": "Bắc Giang",
       "username": "tuandat14",
       "password": "tuandat14",
       "img": "./assets/images/22.png",
@@ -148,6 +160,10 @@
     },
     {
       "id": 2,
+      "fullname": "Trịnh Huyền Anh",
+      "email": "huyenanh@gmail.com",
+      "gender": 0,
+      "address": "BG",
       "username": "huyenanh",
       "password": "huyenanh",
       "img": "./assets/images/anhthe.png",
@@ -165,6 +181,10 @@
       ]
     },
     {
+      "fullname": "Trịnh Tuấn Đạt",
+      "email": "tuandatbg0@gmail.com",
+      "gender": 1,
+      "address": "BG",
       "username": "tuandat",
       "password": "tuandat",
       "img": "",
@@ -172,6 +192,10 @@
       "id": 3
     },
     {
+      "fullname": "Trịnh Tuấn Đạt",
+      "email": "tuandatbg1@gmail.com",
+      "gender": 1,
+      "address": "BG",
       "username": "tuandat25",
       "password": "tuandat25",
       "img": "",
@@ -179,6 +203,10 @@
       "id": 4
     },
     {
+      "fullname": "Trịnh Tuấn Đạt",
+      "email": "tuandat2@gmail.com",
+      "gender": 1,
+      "address": "HN",
       "username": "tuandat0",
       "password": "tuandat0",
       "img": "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",
@@ -206,17 +234,20 @@
   "detail": [
     {
       "id": 1,
-      "id_item": 1,
+      "itemsId": 1,
+      "toppingId": 12,
       "billId": 1
     },
     {
       "id": 2,
-      "id_item": 2,
+      "itemsId": 2,
+      "toppingId": 21,
       "billId": 1
     },
     {
       "id": 3,
-      "id_item": 1,
+      "itemsId": 1,
+      "toppingId": 31,
       "billId": 1
     }
   ],
@@ -235,6 +266,11 @@
       "id": 3,
       "total": 25,
       "userId": 1
+    },
+    {
+      "total": 30,
+      "userId": 1,
+      "id": 4
     }
   ]
 }

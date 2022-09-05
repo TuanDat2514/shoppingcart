@@ -8,7 +8,7 @@
       <div class="header-profile-content">
         <div class="profile-des">
           <img src="/assets/images/logo21123123.png">
-          <h3 class="profile-name">TRỊNH TUẤN ĐẠT</h3>
+          <h3 class="profile-name">{{user.fullname}}</h3>
           <p class="profile-ingredient">ABC</p>
         </div>
       </div>
@@ -16,42 +16,42 @@
     <div class="wrapper-profile" fxLayoutAlign=" stretch">
       <div class="task-profile">
         <ul class="list-task">
-          <li>Account Infomation</li>
-          <li>Transaction History</li>
-          <li>Shipping Address</li>
-          <li>My Rewards</li>
+          <li (click)="changeTask('Account Infomation')" [class.color]="task==='Account Infomation'">Account Infomation</li>
+          <li (click)="changeTask('Transaction History')" [class.color]="task==='Transaction History'">Transaction History</li>
+          <li (click)="changeTask('Shipping Address')" [class.color]="task==='Shipping Address'">Shipping Address</li>
+          <li (click)="changeTask('My Rewards')" [class.color]="task==='My Rewards'">My Rewards</li>
           <li>Log Out</li>
         </ul>
       </div>
       <div class="content-profile">
         <div class="title-content-profile">
-          <div style="padding: 5px 5px 5px 30px;font-weight: bold">Account Infomation</div>
-          <img src="assets/images/icons8-pen-67.png">
+          <div style="padding: 5px 5px 5px 30px;font-weight: bold">{{task}}</div>
+          <img src="assets/images/icons8-pen-67.png" *ngIf="task==='Account Infomation'" (click)="edit()">
         </div>
-        <div class="body-content-profile">
-          <form class="form">
+        <div class="body-content-profile" *ngIf="task==='Account Infomation'">
+          <form id="form" class="form" [formGroup]="forminfo">
             <div class="input-form">
               <label for="fullname">Fullname</label>
-              <input id="fullname" class="w3-input" placeholder="Fullname" type="text">
+              <input id="fullname" class="w3-input" placeholder="Fullname" type="text" formControlName="fullname">
             </div>
             <div class="input-form">
               <label for="email">Email</label>
-              <input id="email" class="w3-input" placeholder="Email" type="text">
+              <input id="email" class="w3-input" placeholder="Email" type="text" formControlName="email">
             </div>
             <div class="input-form">
               <label >Gender</label>
-              <div>
+              <div class="radio-form">
               <label for="male">Male</label>
-              <input id="male" type="radio">
+              <input id="male" type="radio" name="gender" [value]='1' formControlName="gender" [checked]="user.gender==1" >
               <label for="female">Female</label>
-              <input id="female" type="radio">
+              <input id="female" type="radio" name="gender" [value]='0' formControlName="gender" [checked]="user.gender==0">
               </div>
             </div>
             <div class="input-form">
               <label for="address">Address</label>
-              <input id="address" class="w3-input" placeholder="Address" type="text">
+              <input id="address" class="w3-input" placeholder="Address" type="text" formControlName="address">
             </div>
-            <button>UPDATE MY PROFILE</button>
+            <button *ngIf="disabled1" (click)="submitedit()">UPDATE MY PROFILE</button>
           </form>
         </div>
       </div>

@@ -19,6 +19,8 @@ import { NavigatorComponent } from './navigator/navigator.component';
 import { ProfileUserComponent } from './profile-user/profile-user.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { TransactionHistoryComponent } from './profile-user/transaction-history/transaction-history.component';
+import { RewardsComponent } from './profile-user/rewards/rewards.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     HomePageComponent,
     NavigatorComponent,
     ProfileUserComponent,
+    TransactionHistoryComponent,
+    RewardsComponent,
 
   ],
     imports: [
