@@ -1,12 +1,12 @@
 .register{
   width: 35%;
-  max-height: 700px;
+  max-height: 500px;
   background-color: #fcf6f6;
-  height: auto;
   position: relative;
   margin: 100px 30% 0 30%;
   border-radius: 10px;
   display: flex;
+  overflow: auto;
 }
 form {
   border: 3px solid #f1f1f1;
@@ -74,7 +74,15 @@ img.avatar {
 span.psw {
   float: right;
 }
-
+.gender-res{
+  padding: 15px;
+  display: flex;
+  gap: 50px;
+}
+.gender-input{
+  display: flex;
+  gap: 10px;
+}
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {

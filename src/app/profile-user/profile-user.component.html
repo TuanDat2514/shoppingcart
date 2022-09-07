@@ -20,7 +20,7 @@
           <li (click)="changeTask('Transaction History')" [class.color]="task==='Transaction History'">Transaction History</li>
           <li (click)="changeTask('Shipping Address')" [class.color]="task==='Shipping Address'">Shipping Address</li>
           <li (click)="changeTask('My Rewards')" [class.color]="task==='My Rewards'">My Rewards</li>
-          <li>Log Out</li>
+          <li (click)="logout()">Log Out</li>
         </ul>
       </div>
       <div class="content-profile">
@@ -53,6 +53,9 @@
             </div>
             <button *ngIf="disabled1" (click)="submitedit()">UPDATE MY PROFILE</button>
           </form>
+        </div>
+        <div class="body-content-profile" *ngIf="task==='Transaction History'">
+          <app-transaction-history></app-transaction-history>
         </div>
       </div>
     </div>

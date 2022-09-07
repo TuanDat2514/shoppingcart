@@ -1,5 +1,24 @@
 <form method="post" class="register" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <div class="container">
+    <div class="">
+      <input type="text" placeholder="Fullname" name="fullname" id="fullname" required formControlName="fullname">
+    </div>
+    <div class="">
+      <input type="text" placeholder="Email" name="email" id="email" required formControlName="email">
+    </div>
+    <div class="gender-res">
+      <div class="gender-input">
+      <label for="male">Male</label>
+      <input id="male" type="radio" name="gender" [value]='1' formControlName="gender">
+      </div>
+      <div class="gender-input">
+      <label for="female">Female</label>
+      <input id="female" type="radio" name="gender" [value]='0' formControlName="gender">
+      </div>
+    </div>
+    <div class="">
+      <input type="text" placeholder="Address" name="address" id="address" required formControlName="address">
+    </div>
     <div>
       <input type="text" placeholder="Username" name="uname" id="uname" formControlName="username">
     </div>

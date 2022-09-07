@@ -219,6 +219,28 @@
       "img": "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",
       "discount": [],
       "id": 6
+    },
+    {
+      "fullname": "Đạt",
+      "email": "dattuantrinh77@gmail.com",
+      "gender": 1,
+      "address": "Bắc Giang",
+      "username": "tuandat2514",
+      "password": "tuandat2514",
+      "img": "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",
+      "discount": [],
+      "id": 7
+    },
+    {
+      "fullname": "Đạt",
+      "email": "dattuantrinh77@gmail.com",
+      "gender": 1,
+      "address": "Bắc Giang",
+      "username": "tuandat2514",
+      "password": "tuandat2514",
+      "img": "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",
+      "discount": [],
+      "id": 8
     }
   ],
   "category": [
@@ -252,74 +274,63 @@
     },
     {
       "itemsId": 1,
-      "billId": "",
-      "id": 4
-    },
-    {
-      "itemsId": 1,
       "toppingId": 13,
-      "billId": "",
-      "id": 5
-    },
-    {
-      "itemsId": 1,
-      "toppingId": 23,
-      "billId": "",
-      "id": 6
-    },
-    {
-      "itemsId": 1,
-      "toppingId": 13,
-      "billId": 5,
+      "billId": 2,
       "id": 7
     },
     {
       "itemsId": 1,
       "toppingId": 23,
-      "billId": 5,
+      "billId": 2,
       "id": 8
     },
     {
       "itemsId": 1,
       "toppingId": 13,
-      "billId": 6,
+      "billId": 3,
       "id": 9
     },
     {
       "itemsId": 1,
       "toppingId": 22,
-      "billId": 6,
+      "billId": 3,
       "id": 10
     },
     {
       "itemsId": 1,
       "toppingId": 13,
-      "billId": "",
-      "id": 11
+      "billId": 4,
+      "id": 16
     },
     {
       "itemsId": 1,
-      "toppingId": 23,
-      "billId": "",
-      "id": 12
+      "toppingId": 21,
+      "billId": 4,
+      "id": 17
     },
     {
-      "itemsId": 6,
+      "itemsId": 1,
       "toppingId": 12,
-      "billId": "",
-      "id": 13
+      "billId": 5,
+      "id": 18
     },
     {
-      "itemsId": 6,
-      "toppingId": 31,
-      "billId": "",
-      "id": 14
+      "itemsId": 1,
+      "toppingId": 21,
+      "billId": 5,
+      "id": 19
     },
     {
-      "itemsId": 6,
-      "toppingId": 31,
-      "billId": "",
-      "id": 15
+      "itemsId": 2,
+      "toppingId": 13,
+      "billId": 5,
+      "id": 20
+    },
+    {
+      "itemsId": 2,
+      "toppingId": 21,
+      "billId": 5,
+      "id": 21
     }
   ],
   "bills": [
@@ -330,63 +341,23 @@
     },
     {
       "id": 2,
-      "total": 20,
-      "userId": 2
-    },
-    {
-      "id": 3,
-      "total": 25,
-      "userId": 1
-    },
-    {
-      "total": 30,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "id": 5,
       "total": 49,
       "userId": 1
     },
     {
-      "id": 6,
-      "total": 26,
-      "userId": 0
-    },
-    {
-      "id": 7,
-      "total": 23,
-      "userId": 0
-    },
-    {
-      "id": 8,
-      "total": 50,
+      "id": 3,
+      "total": 22,
       "userId": 1
     },
     {
-      "id": 9,
-      "total": 56,
-      "userId": 0
+      "id": 4,
+      "total": 23,
+      "userId": 1
     },
     {
-      "id": 10,
+      "id": 5,
       "total": 47,
-      "userId": 0
-    },
-    {
-      "id": 11,
-      "total": 45,
-      "userId": 0
-    },
-    {
-      "id": 12,
-      "total": 56,
-      "userId": 0
-    },
-    {
-      "id": 13,
-      "total": 45,
-      "userId": 0
+      "userId": 2
     }
   ]
 }

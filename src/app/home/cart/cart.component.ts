@@ -19,6 +19,7 @@ export class CartComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.data.Total.subscribe(data=>this.total=data);
     this.data.Bool.subscribe((data)=>this.isEmpty=data);
+
   }
   checkout(){
     console.log(this.items)

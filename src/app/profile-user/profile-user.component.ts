@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {DataService} from "../services/data.service";
 import {User} from "../../data/interface/item";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {NavigatorComponent} from "../navigator/navigator.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-profile-user',
@@ -14,7 +16,8 @@ export class ProfileUserComponent implements OnInit {
   disabled1 = false;
   task = 'Account Infomation';
   message='';
-  constructor(private data: DataService, private fb: FormBuilder) {
+  @ViewChild(NavigatorComponent) _nav!:NavigatorComponent;
+  constructor(private data: DataService, private fb: FormBuilder,private router:Router) {
   }
 
   ngOnInit(): void {
@@ -58,5 +61,8 @@ export class ProfileUserComponent implements OnInit {
         this.message="Update Success"
       }
     });
+  }
+  logout(){
+    this._nav.logout();
   }
 }

@@ -11,7 +11,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .navigator{
   min-height: 80px;
-  padding-left: 16px;
   padding-right: 16px;
   margin: auto;
   width: 100%;

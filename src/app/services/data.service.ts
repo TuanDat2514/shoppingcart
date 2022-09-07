@@ -83,4 +83,7 @@ export class DataService {
   postDetail(detail:any){
     return this.http.post<Response>(environment.URL+environment.DETAIL,detail,{ observe: 'response'});
   }
+  getBillembedDetail():Observable<any>{
+    return this.http.get(environment.URL+environment.BILL_EMBED_DETAIL);
+  }
 }

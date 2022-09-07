@@ -149,5 +149,12 @@
 .color{
   color: #0b89ea!important;
 }
+.body-content-profile{
+  height: 500px;
+  overflow: auto;
+}
+.body-content-profile::-webkit-scrollbar {
+  display: none;
+}
 
 

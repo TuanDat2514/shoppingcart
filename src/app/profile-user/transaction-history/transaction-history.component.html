@@ -1,1 +1,8 @@
-<p>transaction-history works!</p>
+<div class="bill" *ngFor="let item of Bill">
+  <img src="https://img.freepik.com/premium-vector/success-approved-payment-check-mark-notification-paper-receipt-bill-invoice-icon_101884-1215.jpg?w=2000">
+  <div class="content-bill">
+    <div class="id-bill">ID: {{item.id}}</div>
+    <div class="des-bill">aafdgadfg</div>
+  </div>
+  <div class="total-bill">{{item.total|currency}}</div>
+</div>

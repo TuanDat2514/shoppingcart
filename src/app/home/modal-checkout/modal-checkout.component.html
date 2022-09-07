@@ -46,15 +46,14 @@
     </div>
     <div class="divider"></div>
     <div class="cart-total">
-      <select>
-        <option *ngFor="let u of user.discount" [value]="u.condition">{{u.name}}</option>
-      </select>
+<!--      <select>-->
+<!--        <option *ngFor="let u of user.discount" [value]="u.condition">{{u.name}}</option>-->
+<!--      </select>-->
       <div class="big-text">Total</div>
       <div class="big-text" id="cart-total-price" style="width: 100%">{{total|currency}}</div>
     </div>
     <div class="cart-checkout">
-      <button class="button-checkout" (click)="opencloseDialog()">Checkout
-      </button>
+      <button class="button-checkout" (click)="opencloseDialog()">Checkout</button>
     </div>
     <div class="loading" *ngIf="loading">
       <div class="loader">Loading...</div>
@@ -62,7 +61,9 @@
   </div>
 </div>
 <div class="dialog" *ngIf="opendialog">
-  <dialog [open]="opendialog" class="dialog-content"><p>Are you sure this bill?</p>
+  <dialog [open]="opendialog" class="dialog-content">
+    <p>Delivery address:No.25, 12/38 Alley, 38 lane, 148 cluster, Nguyen Khanh Toan street, Quan Hoa Ward, Cau Giay district, Ha Noi?</p><br>
+    <p>Phone: 0388138789</p>
     <div class="btn-dialog">
       <button class="btn-action confirm" (click)="confirmCheckout()"><p>Confirm</p></button>
       <button class="btn-action cancel" (click)="opencloseDialog()"><p>Cancel</p></button>

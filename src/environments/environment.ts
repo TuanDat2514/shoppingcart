@@ -9,7 +9,6 @@ export const environment = {
   ITEMS:"items/",
   CATEGORY_ITEM:"items?category=",
 
-
   //topping
   TOPPING:"topping/",
 
@@ -23,6 +22,7 @@ export const environment = {
 
   //bill
   BILL:"bills/",
+  BILL_EMBED_DETAIL:"bills?_embed=detail",
 
   //detail
   DETAIL:"detail/"

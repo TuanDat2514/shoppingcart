@@ -16,14 +16,14 @@ export class NavigatorComponent implements OnInit {
   dropuser:boolean=false;
   showLogin:boolean=false;
   showRegister:boolean=false;
-  constructor(private data:DataService,private route:Router) { }
+  constructor(private data:DataService,private router:Router) { }
 
   ngOnInit(): void {
     this.data.Submitted.subscribe(data=>this.submitted=data);
     this.data.User.subscribe((user:User)=>this.user=user)
   }
   a(a:any){
-    this.route.navigate([a]);
+    this.router.navigate([a]);
   }
   dropu(){
     this.dropuser=!this.dropuser;
@@ -47,5 +47,24 @@ export class NavigatorComponent implements OnInit {
   }
   closeRegister(event:any){
     this.showRegister=event;
+  }
+  logout(){
+    this.submitted=!this.submitted;
+    this.data.changeSubmit(this.submitted);
+    this.data.changeUser({
+      id: 0,
+      fullname:'',
+      email: '',
+      gender: 0,
+      address: '',
+      username: '',
+      password: '',
+      img: '',
+      discount:[{
+        name:'',
+        condition: 0,
+        discount: 0,
+      }]});
+    this.router.navigate(['/home']);
   }
 }

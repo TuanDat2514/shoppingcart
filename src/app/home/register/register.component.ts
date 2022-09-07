@@ -16,6 +16,14 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm=this.fb.group({
+      fullname: new FormControl(
+        '', [Validators.required]),
+      email: new FormControl(
+        '', [Validators.required]),
+      gender: new FormControl(
+        '', [Validators.required]),
+      address: new FormControl(
+        '', [Validators.required]),
       username: new FormControl(
         '', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]),
       password: new FormControl(
@@ -25,12 +33,13 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit(){
     if(this.registerForm.value.password==this.registerForm.value.confirmPassword){
-      let u={username:this.registerForm.value.username,password:this.registerForm.value.password,img:"https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",discount:[]}
+      let u={fullname:this.registerForm.value.fullname,email:this.registerForm.value.email,gender:this.registerForm.value.gender,address:this.registerForm.value.address,username:this.registerForm.value.username,password:this.registerForm.value.password,img:"https://icon-library.com/images/user-icon-jpg/user-icon-jpg-11.jpg",discount:[]}
       this.authService.register(u).subscribe((response)=>{});
     }
   }
   close(){
     this.closeRegister.emit(false);
   }
+
 }
 

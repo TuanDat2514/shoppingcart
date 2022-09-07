@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core'
 // import { User } from 'src/data/interface/item';
 import {DataService} from "../../services/data.service";
 import {AddToppingComponent} from "../add-topping/add-topping.component";
+import {CartComponent} from "../cart/cart.component";
 
 @Component({
   selector: 'app-modal-checkout',
@@ -15,6 +16,7 @@ export class ModalCheckoutComponent implements OnInit {
   user:any=this.data.user;
   disabled: boolean = false;
   opendialog:boolean=false;
+  idbill:any;
   @Output() closeModal = new EventEmitter<boolean>();
   loading=false;
   constructor(private data: DataService) {
@@ -66,27 +68,28 @@ export class ModalCheckoutComponent implements OnInit {
       this.total = 0;
       // location.reload();
       this.data.changeTotal(0);
+      this.data.changeBool(!this.data.bool);
     }
   }
 
   confirmCheckout(){
+
     this.loading=true;
     this.opendialog=false;
-
     let bill={id:'',total:this.total,userId:this.user.id};
     this.data.postBill(bill).subscribe();
+    this.data.getBill().subscribe(data=>{
+      this.idbill=data[data.length-1].id;
+      console.log(data[data.length-1].id);
+    })
     let x=setTimeout(() =>{
       this.loading=false
       for (let i=0;i<this.itemscart.length;i++){
         for (let j=0;j<this.itemscart[i].toppings[0].length;j++){
           console.log(this.itemscart[i].id+" : "+this.itemscart[i].toppings[0][j].id);
-          let detail={itemsId:'',toppingId:'',billId:''};
-          this.data.getBill().subscribe(data=>{
-            detail.billId=data[data.length-1].id;
-          })
+          let detail={itemsId:'',toppingId:'',billId: this.idbill};
           detail.itemsId=this.itemscart[i].id;
           detail.toppingId=this.itemscart[i].toppings[0][j].id
-          console.log(detail);
           this.data.postDetail(detail).subscribe();
         }
       }
@@ -103,6 +106,5 @@ export class ModalCheckoutComponent implements OnInit {
     this.data.items[indexItem].toppings[0].splice(j,1);
     this.data.items[indexItem].total=this.data.items[indexItem].total-i*this.data.items[indexItem].qty;
     this.data.changeTotal(this.data.total.value-i);
-    console.log(i);
   }
 }

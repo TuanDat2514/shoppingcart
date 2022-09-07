@@ -68,6 +68,7 @@ img.avatar {
 .container {
   flex: 1;
   padding: 16px;
+  text-align: center;
 }
 
 /* The "Forgot password" text */

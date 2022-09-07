@@ -43,7 +43,7 @@
       <img class="dropUser" (focusout)="dropu()" (click)="dropu()" src="{{user.img}}">
       <ul class="abc" *ngIf="dropuser">
         <li class="main-content" (click)="a('/user')">Profile</li>
-        <li class="main-content">Log out</li>
+        <li class="main-content" (click)="logout()">Log out</li>
       </ul>
     </ng-template>
   </div>
