@@ -86,4 +86,13 @@ export class DataService {
   getBillembedDetail():Observable<any>{
     return this.http.get(environment.URL+environment.BILL_EMBED_DETAIL);
   }
+  getDetailexpandBill():Observable<any>{
+    return this.http.get(environment.URL+environment.DETAIL_EXPAND_ITEMS);
+  }
+  postHistory(bill:any){
+    return this.http.post<Response>(environment.URL+environment.HISTORY,bill,{ observe: 'response'});
+  }
+  getHistorybyUser(id_user:any):Observable<any>{
+    return this.http.get(environment.URL+environment.HISTORY_USER+id_user);
+  }
 }

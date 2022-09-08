@@ -25,7 +25,12 @@ export const environment = {
   BILL_EMBED_DETAIL:"bills?_embed=detail",
 
   //detail
-  DETAIL:"detail/"
+  DETAIL:"detail/",
+  DETAIL_EXPAND_ITEMS:"detail?_expand=items",
+
+  //history
+  HISTORY:"history/",
+  HISTORY_USER:"history?userId="
 };
 /*
  * For easier debugging in development mode, you can import the following file

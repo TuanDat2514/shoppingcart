@@ -1,5 +1,5 @@
 .bill{
-  background: yellowgreen;
+  background: #cbcbcb;
   display: flex;
   padding: 20px;
   margin: 5%;
@@ -19,4 +19,8 @@
 .total-bill{
   flex: 1;
 
+}
+.des-bill{
+  display: inline-block;
+  margin-right: 10px;
 }
