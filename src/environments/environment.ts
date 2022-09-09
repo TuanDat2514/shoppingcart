@@ -30,7 +30,8 @@ export const environment = {
 
   //history
   HISTORY:"history/",
-  HISTORY_USER:"history?userId="
+  HISTORY_USER:"history?userId=",
+  HISTORY_ID:"history?id="
 };
 /*
  * For easier debugging in development mode, you can import the following file

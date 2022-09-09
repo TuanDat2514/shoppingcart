@@ -8,8 +8,12 @@ import {AddToppingComponent} from "./home/add-topping/add-topping.component";
 import {HomePageComponent} from "./home-page/home-page.component";
 import {RegisterComponent} from "./home/register/register.component";
 import {ProfileUserComponent} from "./profile-user/profile-user.component";
+import {
+  TransactionDetailComponent
+} from "./profile-user/transaction-history/transaction-detail/transaction-detail.component";
 
 const routes: Routes = [
+  {path:'detailtransaction',component:TransactionDetailComponent},
   {path:'addtopping',component:AddToppingComponent},
   {path:'cart',component:CartComponent},
   {path:'menu',component:MenuComponent},

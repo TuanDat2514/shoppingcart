@@ -21,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { TransactionHistoryComponent } from './profile-user/transaction-history/transaction-history.component';
 import { RewardsComponent } from './profile-user/rewards/rewards.component';
+import { TransactionDetailComponent } from './profile-user/transaction-history/transaction-detail/transaction-detail.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RewardsComponent } from './profile-user/rewards/rewards.component';
     ProfileUserComponent,
     TransactionHistoryComponent,
     RewardsComponent,
+    TransactionDetailComponent,
 
   ],
     imports: [

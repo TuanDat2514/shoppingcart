@@ -462,18 +462,16 @@
           "img": "./assets/images/sdw.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 23,
-                "name": "New York Crust",
-                "price": 0
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 23,
+              "name": "New York Crust",
+              "price": 0
+            }
           ],
           "total": 23
         },
@@ -485,18 +483,16 @@
           "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 22,
-                "name": "Handtossed",
-                "price": 0
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
           ],
           "total": 24
         }
@@ -516,18 +512,16 @@
           "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 32,
-                "name": "Double Meat",
-                "price": 5
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 32,
+              "name": "Double Meat",
+              "price": 5
+            }
           ],
           "total": 28
         },
@@ -539,18 +533,16 @@
           "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
           "qty": 2,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 31,
-                "name": " Extra Meat",
-                "price": 0
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 31,
+              "name": " Extra Meat",
+              "price": 0
+            }
           ],
           "total": 46
         }
@@ -570,18 +562,16 @@
           "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 22,
-                "name": "Handtossed",
-                "price": 0
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
           ],
           "total": 24
         },
@@ -593,18 +583,16 @@
           "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 32,
-                "name": "Double Meat",
-                "price": 5
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 32,
+              "name": "Double Meat",
+              "price": 5
+            }
           ],
           "total": 28
         }
@@ -624,18 +612,16 @@
           "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 22,
-                "name": "Handtossed",
-                "price": 0
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
           ],
           "total": 24
         },
@@ -647,18 +633,16 @@
           "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 32,
-                "name": "Double Meat",
-                "price": 5
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 32,
+              "name": "Double Meat",
+              "price": 5
+            }
           ],
           "total": 28
         }
@@ -678,18 +662,16 @@
           "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
           "qty": 1,
           "toppings": [
-            [
-              {
-                "id": 13,
-                "name": "Triple Cheese",
-                "price": 8
-              },
-              {
-                "id": 22,
-                "name": "Handtossed",
-                "price": 0
-              }
-            ]
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
           ],
           "total": 24
         },
@@ -701,6 +683,56 @@
           "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
           "qty": 1,
           "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 32,
+              "name": "Double Meat",
+              "price": 5
+            }
+          ],
+          "total": 28
+        }
+      ]
+    },
+    {
+      "id": "dR2ow3y",
+      "idbill": "",
+      "total": 50,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 1,
+          "title": "Original",
+          "des": "Tomato sauce, mozzarella & oregano",
+          "price": 18,
+          "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+          "qty": 1,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
+          ],
+          "total": 26
+        },
+        {
+          "id": 3,
+          "title": "Hawaiian",
+          "des": "Tomato sauce, mozzarella, ham & pineapple",
+          "price": 16,
+          "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+          "qty": 1,
+          "toppings": [
             [
               {
                 "id": 13,
@@ -708,13 +740,260 @@
                 "price": 8
               },
               {
-                "id": 32,
-                "name": "Double Meat",
-                "price": 5
+                "id": 23,
+                "name": "New York Crust",
+                "price": 0
               }
             ]
           ],
+          "total": 24
+        }
+      ]
+    },
+    {
+      "id": "tTHRubI",
+      "idbill": "",
+      "total": 50,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 1,
+          "title": "Original",
+          "des": "Tomato sauce, mozzarella & oregano",
+          "price": 18,
+          "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+          "qty": 1,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
+          ],
+          "total": 26
+        },
+        {
+          "id": 3,
+          "title": "Hawaiian",
+          "des": "Tomato sauce, mozzarella, ham & pineapple",
+          "price": 16,
+          "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+          "qty": 1,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 23,
+              "name": "New York Crust",
+              "price": 0
+            }
+          ],
+          "total": 24
+        }
+      ]
+    },
+    {
+      "id": "d_wOgM9",
+      "idbill": "",
+      "total": 64,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 5,
+          "title": "Chili Pie",
+          "des": "Tomato sauce, mozzarella & mild salami",
+          "price": 15,
+          "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+          "qty": 4,
+          "toppings": [
+            {
+              "id": 12,
+              "name": "Double Cheese",
+              "price": 4
+            },
+            {
+              "id": 31,
+              "name": " Extra Meat",
+              "price": 0
+            }
+          ],
+          "total": 64
+        }
+      ]
+    },
+    {
+      "id": "_XwwEpc",
+      "idbill": "",
+      "total": 64,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 5,
+          "title": "Chili Pie",
+          "des": "Tomato sauce, mozzarella & mild salami",
+          "price": 15,
+          "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+          "qty": 4,
+          "toppings": [
+            {
+              "id": 12,
+              "name": "Double Cheese",
+              "price": 4
+            },
+            {
+              "id": 31,
+              "name": " Extra Meat",
+              "price": 0
+            }
+          ],
+          "total": 64
+        }
+      ]
+    },
+    {
+      "id": "5hiAHKc",
+      "idbill": "",
+      "total": 161,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 2,
+          "title": "Salami",
+          "des": "Tomato sauce, mozzarella & mild salami",
+          "price": 15,
+          "img": "./assets/images/sdw.jpg",
+          "qty": 7,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
+          ],
+          "total": 161
+        }
+      ]
+    },
+    {
+      "id": "DfaJr_-",
+      "idbill": "",
+      "total": 44,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 1,
+          "title": "Original",
+          "des": "Tomato sauce, mozzarella & oregano",
+          "price": 18,
+          "img": "./assets/images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg",
+          "qty": 2,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            }
+          ],
+          "total": 44
+        }
+      ]
+    },
+    {
+      "id": "5VZYrkj",
+      "idbill": "",
+      "total": 28,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 6,
+          "title": "BBQ",
+          "des": "Tomato sauce, mozzarella & mild salami",
+          "price": 15,
+          "img": "./assets/images/istockphoto-1188412964-612x612.jpg",
+          "qty": 1,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 32,
+              "name": "Double Meat",
+              "price": 5
+            }
+          ],
           "total": 28
+        }
+      ]
+    },
+    {
+      "id": "GDZNInV",
+      "idbill": "",
+      "total": 33,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 4,
+          "title": "Chicken",
+          "des": "Tomato sauce, mozzarella, chicken, pineapple & bbq sauce",
+          "price": 25,
+          "img": "./assets/images/pizza-dark-background-classic-italian-pizza-with-tomatoes-pepper-vegetables-sauce-mozarella-cheese-dark-kitchen-table-copy-space_90380-947.jpg",
+          "qty": 1,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 21,
+              "name": "Thin Crust",
+              "price": 0
+            }
+          ],
+          "total": 33
+        }
+      ]
+    },
+    {
+      "id": "Ln6w9IH",
+      "total": 23,
+      "userId": 1,
+      "detail": [
+        {
+          "id": 2,
+          "title": "Salami",
+          "des": "Tomato sauce, mozzarella & mild salami",
+          "price": 15,
+          "img": "./assets/images/sdw.jpg",
+          "qty": 1,
+          "toppings": [
+            {
+              "id": 13,
+              "name": "Triple Cheese",
+              "price": 8
+            },
+            {
+              "id": 22,
+              "name": "Handtossed",
+              "price": 0
+            }
+          ],
+          "total": 23
         }
       ]
     }

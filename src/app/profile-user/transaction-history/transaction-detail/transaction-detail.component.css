@@ -1,0 +1,22 @@
+.invoice-title h2, .invoice-title h3 {
+  display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+  border-top: none;
+}
+
+.table > thead > tr > .no-line {
+  border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+  border-top: 2px solid;
+}
+.container{
+  margin-top: 3%;
+  width: 70%!important;
+  z-index: 2;
+  background: rgba(232, 226, 226, 0.99);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

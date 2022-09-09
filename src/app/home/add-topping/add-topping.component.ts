@@ -102,7 +102,7 @@ export class AddToppingComponent implements OnInit {
         price: this.selectedItem.price,
         img: this.selectedItem.img,
         qty: this.inpValue,
-        toppings: [selectedTopping],//
+        toppings: selectedTopping,//
         total: this.selectedItem.price*this.inpValue+this.totaltopping
       });
     }

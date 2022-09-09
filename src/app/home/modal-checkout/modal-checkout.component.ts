@@ -76,8 +76,7 @@ export class ModalCheckoutComponent implements OnInit {
   confirmCheckout() {
     this.loading = true;
     this.opendialog = false;
-    let bill = {id:'',idbill: '', total: this.total, userId: this.user.id,detail:this.data.items};
-    this.data.postHistory(bill).subscribe();
+    let bill = {id:'', total: this.total, userId: this.user.id,detail:this.data.items};
     // this.data.postBill(bill).subscribe();
     // this.data.getBill().subscribe(data => {
     //   this.idbill = data[data.length - 1].id;
@@ -86,6 +85,10 @@ export class ModalCheckoutComponent implements OnInit {
     let x = setTimeout(() => {
       this.loading = false
       this.data.postHistory(bill).subscribe();
+      this.data.items=[];
+      this.data.changeTotal(0);
+      this.data.changeBool(!this.data.bool);
+      this.closeModal.emit(false);
       clearTimeout(x);
     }, 3000);
   }

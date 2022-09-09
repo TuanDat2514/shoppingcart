@@ -95,4 +95,7 @@ export class DataService {
   getHistorybyUser(id_user:any):Observable<any>{
     return this.http.get(environment.URL+environment.HISTORY_USER+id_user);
   }
+  getHistorybyId(idBill:any):Observable<any>{
+    return this.http.get(environment.URL+environment.HISTORY_ID+idBill);
+  }
 }

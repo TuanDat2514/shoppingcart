@@ -10,6 +10,8 @@ export class TransactionHistoryComponent implements OnInit {
   user=this.data.user.getValue();
   historyuser!:any;
   item:any[]=[];
+  idbill!:string;
+  showDetail:boolean=false;
   constructor(private data:DataService) { }
 
   ngOnInit(): void {
@@ -17,8 +19,12 @@ export class TransactionHistoryComponent implements OnInit {
       this.historyuser=data;
     })
   }
-  getBill(){
+  getBillbyId(item:any){
+    this.idbill=item.id;
+    this.showDetail=!this.showDetail;
+  }
+  click(){
+    this.showDetail=!this.showDetail;
 
   }
-
 }

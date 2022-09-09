@@ -1,10 +1,14 @@
-<div class="bill" *ngFor="let item of historyuser;let i=index">
-  <img src="https://img.freepik.com/premium-vector/success-approved-payment-check-mark-notification-paper-receipt-bill-invoice-icon_101884-1215.jpg?w=2000">
+<div class="bill" *ngFor="let item of historyuser;let i=index" (click)="getBillbyId(item)">
+  <img
+    src="https://img.freepik.com/premium-vector/success-approved-payment-check-mark-notification-paper-receipt-bill-invoice-icon_101884-1215.jpg?w=2000">
   <div class="content-bill">
     <div class="id-bill">ID: {{item.id}}</div>
-    <div class="des-bill" *ngFor="let title of historyuser[i].detail">{{title.title}}
-      <div>x{{title.qty}}</div>
+    <div class="des-bill" *ngFor="let detail of historyuser[i].detail">{{detail.title}}
+      <div>x{{detail.qty}}</div>
     </div>
   </div>
-  <div class="total-bill">{{item.total|currency}}</div>
+  <div class="total-bill">{{item.total+10|currency}}</div>
+</div>
+<div class="detail-tran" *ngIf="showDetail" (click)="click()">
+  <app-transaction-detail [idbill]="idbill"></app-transaction-detail>
 </div>
