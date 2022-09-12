@@ -4,14 +4,21 @@
       <img class="img-search" src="assets/images/icons8-search-100.png">
       <input [(ngModel)]="seachText" placeholder="Search...">
     </div>
-    <div class="item" *ngFor="let item of item|filter:seachText;last as l" [style.margin-bottom]="l? '50px':''" fxLayout="row">
-      <img class="item-img" [src]="item.img">
-      <div class="item-des">
-        <h3 class="item-name">{{item.title}}</h3>
-        <p class="item-ingredient">{{item.ingredient}}</p>
-        <h6 class="item-price">{{item.price|currency}}</h6>
+    <div class="" *ngFor="let item of item|filter:seachText" fxLayout="row">
+      <div class="item-block" fxLayout="row">
+        <div class="item1" style="gap: 20px">
+          <h3 class="item-name">{{item.title}}</h3>
+        </div>
+        <div class="item" *ngFor="let it of item.items|filter:seachText;last as l;let i=index" [style.margin-bottom]="l? '50px':''">
+          <img class="item-img" [src]="it.img">
+          <div class="item-des">
+            <h3 class="item-name">{{it.title}}</h3>
+            <p class="item-ingredient">{{it.ingredient}}</p>
+            <h6 class="item-price">{{it.price|currency}}</h6>
+          </div>
+          <a class="img-btn" data-id="1" (click)="addItem(it)">add to cart</a>
+        </div>
       </div>
-      <a class="img-btn" data-id="1" (click)="addItem(item)">add to cart</a>
     </div>
  </ng-container>
 </div>

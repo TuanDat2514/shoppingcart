@@ -16,7 +16,8 @@
 .container{
   margin-top: 3%;
   width: 70%!important;
-  z-index: 2;
+  z-index: 5;
   background: rgba(232, 226, 226, 0.99);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }

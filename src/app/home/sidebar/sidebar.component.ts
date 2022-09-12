@@ -17,7 +17,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.data.getCategory().subscribe(data=>{this.category=data;
-      console.log(this.category)});
+      console.log(this.category)
+    });
   }
   click(c:any){
     console.log(c);

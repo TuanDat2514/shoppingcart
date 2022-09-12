@@ -68,6 +68,11 @@
 .img-btn:hover{
   background-color: #b7b7b7;
 }
+.item-block{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 @media screen and (max-width: 414px){
   .item {
     display: block;

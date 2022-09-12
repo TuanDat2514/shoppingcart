@@ -9,6 +9,7 @@ import {environment} from "../../environments/environment";
 })
 export class DataService {
   items:any[]=[];
+  category:any[]=[];
   total=new BehaviorSubject<number>(0);
   Total=this.total.asObservable()
   bool=new BehaviorSubject<any>('');

@@ -25,6 +25,5 @@ export class TransactionHistoryComponent implements OnInit {
   }
   click(){
     this.showDetail=!this.showDetail;
-
   }
 }
